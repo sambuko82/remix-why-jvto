@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-heading: "Public Sans", sans-serif;
+  
+  --color-safety-orange: #FF6B35;
+  --color-authority-navy: #0F172A;
+  --color-authority-charcoal: #0D1B12;
+  --color-verified-lime: #A3E635;
+  --color-verified-bright: #CCFF00;
+  --color-audit-white: #F4F6F8;
+  --color-slate-200: #E2E8F0;
+  
+  /* Semantic Color Key - Cognitive UX */
+  --color-trust-blue: #0F172A;
+  --color-danger-red: #EF4444;
+  --color-success-green: #22C55E;
+  --color-warning-yellow: #F59E0B;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-card: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+@layer base {
+  body {
+    @apply bg-audit-white text-authority-navy font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-black uppercase;
+  }
+}
+
+@layer utilities {
+  /* Power of Six - Font Size System */
+  .text-h1 { @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-[-0.03em] leading-[1.1]; }
+  .text-h2 { @apply text-3xl sm:text-4xl md:text-6xl tracking-[-0.02em] leading-[1.15]; }
+  .text-h3 { @apply text-2xl sm:text-3xl md:text-4xl tracking-[-0.01em] leading-[1.2]; }
+  .text-h4 { @apply text-xl sm:text-2xl md:text-3xl tracking-normal leading-[1.25]; }
+  .text-h5 { @apply text-lg sm:text-xl md:text-2xl tracking-normal leading-[1.3]; }
+  .text-h6 { @apply text-base sm:text-lg md:text-xl tracking-normal leading-[1.4]; }
+}
+
+@layer components {
+  .bento-card {
+    @apply bg-white border border-slate-200 rounded-md shadow-card hover:shadow-hover hover:-translate-y-1 hover:border-safety-orange/30 transition-all duration-300 overflow-hidden;
+  }
+  
+  .badge-eyebrow {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full font-mono font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] text-[10px] md:text-[11px];
+  }
+  
+  .badge-eyebrow-navy {
+    @apply bg-authority-navy/5 border border-authority-navy/10 text-authority-navy;
+  }
+  
+  .badge-eyebrow-orange {
+    @apply bg-safety-orange/10 border border-safety-orange/30 text-safety-orange;
+  }
+  
+  .badge-eyebrow-white {
+    @apply bg-white/5 border border-white/10 text-white;
+  }
+  
+  .verified-badge {
+    @apply bg-gradient-to-r from-verified-bright to-verified-lime text-authority-navy font-mono font-bold text-[11px] px-2 py-1 rounded-sm uppercase tracking-wider shadow-sm;
+  }
+  
+  .hash-string {
+    @apply font-mono text-[11px] text-slate-500 truncate bg-slate-50 px-2 py-1 rounded-sm border border-slate-100;
+  }
+  
+  .status-live {
+    @apply relative flex h-2 w-2;
+  }
+  
+  .status-live::after {
+    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-safety-orange opacity-75 content-[''];
+  }
+  
+  .status-live::before {
+    @apply relative inline-flex rounded-full h-2 w-2 bg-safety-orange content-[''];
+  }
+  
+  .scanline {
+    @apply absolute w-full h-[2px] bg-safety-orange/30 shadow-[0_0_10px_rgba(255,107,53,0.5)] z-10 pointer-events-none;
+    animation: scan 3s linear infinite;
+  }
+
+  .forensic-loupe {
+    @apply absolute w-48 h-48 rounded-full border-4 border-safety-orange shadow-2xl pointer-events-none overflow-hidden z-30 bg-white;
+  }
+  
+  @keyframes scan {
+    0% { top: 0%; }
+    100% { top: 100%; }
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  
+  .grid-pattern {
+    background-image: radial-gradient(circle, #0F172A 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.03;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+  }
+
+  /* Visual Rhythm Utilities - 4-Point Grid Logic (32px baseline = py-8) */
+  .section-spacing {
+    @apply py-16 md:py-24 lg:py-32; /* Maintaining breathing room for premium feel */
+  }
+  
+  .section-spacing-tight {
+    @apply py-8 md:py-12;
+  }
+
+  .container-authority {
+    @apply max-w-7xl mx-auto px-4 sm:px-8 lg:px-12; /* Increased horizontal padding for spatial logic */
+  }
+
+  /* Pro Typography Framework */
+  .heading-display {
+    @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-[-0.04em] leading-[1.05] text-authority-navy font-black uppercase;
+  }
+
+  .heading-section {
+    @apply text-3xl sm:text-4xl md:text-6xl tracking-[-0.03em] leading-[1.1] text-authority-navy font-black uppercase;
+  }
+
+  .body-text {
+    @apply text-slate-500 font-light leading-relaxed text-sm md:text-base lg:text-lg tracking-tight;
+  }
+
+  /* Pro Overlay Hack: Progressive Blur + Gradient */
+  .pro-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent backdrop-blur-[2px];
+  }
+}
