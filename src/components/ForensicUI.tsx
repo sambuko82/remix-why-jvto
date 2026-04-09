@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { ShieldCheck, FileCheck, ExternalLink, Lock, CheckCircle2, AlertCircle, Fingerprint, ChevronRight } from 'lucide-react';
 
@@ -91,3 +93,4 @@ export const PillarCard = ({
     </button>
   </div>
 );
+

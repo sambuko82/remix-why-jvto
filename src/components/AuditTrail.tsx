@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ShieldCheck, History, X, Fingerprint, Clock, CheckCircle2 } from 'lucide-react';
@@ -46,8 +48,8 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({ entityId, entityName, lo
                   <History className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-black text-authority-navy uppercase tracking-tight leading-none mb-2">Audit Trail</h3>
-                  <p className="font-mono text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Entity: {entityName} // ID: {entityId}</p>
+                  <h3 className="text-2xl font-black text-authority-navy uppercase tracking-tight leading-none mb-2">Reference Log</h3>
+                  <p className="font-mono text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Profile: {entityName} // ID: {entityId}</p>
                 </div>
               </div>
               <button 
@@ -96,10 +98,10 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({ entityId, entityName, lo
             <div className="p-8 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <Fingerprint className="w-5 h-5 text-slate-300" />
-                <span className="font-mono text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Hash: {entityId.slice(0, 12)}...</span>
+                <span className="font-mono text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Ref: {entityId.slice(0, 12)}...</span>
               </div>
               <div className="px-5 py-2 rounded-md bg-verified-bright/10 text-verified-bright border border-verified-bright/20 font-black text-[10px] uppercase tracking-[0.2em] shadow-card">
-                STATUS: SECURE
+                STATUS: ACTIVE
               </div>
             </div>
           </motion.div>
@@ -108,3 +110,4 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({ entityId, entityName, lo
     </AnimatePresence>
   );
 };
+

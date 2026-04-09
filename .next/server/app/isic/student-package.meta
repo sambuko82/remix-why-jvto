@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/isic/layout,_N_T_/isic/student-package/layout,_N_T_/isic/student-package/page,_N_T_/isic/student-package"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/isic/student-package/__PAGE__",
+    "/isic/student-package",
+    "/isic",
+    "/_index",
+    "/_head"
+  ]
+}

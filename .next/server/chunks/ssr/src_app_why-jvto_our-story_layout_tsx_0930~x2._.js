@@ -1,0 +1,3 @@
+module.exports=[37201,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/why-jvto/our-story",{title:"Our Story | Documented JVTO History | Java Volcano Tour Operator",description:"Documented continuity behind JVTO: founding history, earlier tourism records, guidebook traces, and long-running East Java operating context."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),36819,a=>{a.n(a.i(37201))}];
+
+//# sourceMappingURL=src_app_why-jvto_our-story_layout_tsx_0930~x2._.js.map

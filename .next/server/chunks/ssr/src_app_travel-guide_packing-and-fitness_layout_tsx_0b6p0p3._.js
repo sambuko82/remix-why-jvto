@@ -1,0 +1,3 @@
+module.exports=[49800,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/travel-guide/packing-and-fitness",{title:"Packing & Fitness | Travel Guide | Java Volcano Tour Operator",description:"What to pack and how fit you need to be for Bromo, Ijen, Tumpak Sewu, and other JVTO routes in East Java."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),18153,a=>{a.n(a.i(49800))}];
+
+//# sourceMappingURL=src_app_travel-guide_packing-and-fitness_layout_tsx_0b6p0p3._.js.map

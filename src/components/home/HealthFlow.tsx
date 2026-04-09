@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Activity, ShieldAlert, HeartPulse, ClipboardCheck, ChevronRight, Stethoscope, FileText } from 'lucide-react';
@@ -114,8 +116,8 @@ export const HealthFlow = () => {
                   <Activity className="w-4 h-4 text-safety-orange" />
                   <span className="font-mono text-[10px] text-slate-400 uppercase tracking-widest">Clearance</span>
                 </div>
-                <p className="font-black text-safety-orange text-lg md:text-xl uppercase tracking-tight leading-none">100%</p>
-                <p className="text-xs text-slate-400 mt-2">Guests Screened Pre-Ascent</p>
+                <p className="font-black text-safety-orange text-lg md:text-xl uppercase tracking-tight leading-none">Included</p>
+                <p className="text-xs text-slate-400 mt-2">Handled before Ijen ascent, not sold as an add-on</p>
               </div>
             </motion.div>
           </div>
@@ -124,3 +126,4 @@ export const HealthFlow = () => {
     </section>
   );
 };
+

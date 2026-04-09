@@ -1,0 +1,3 @@
+module.exports=[63237,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/travel-guide/safety-on-tours",{title:"Safety on Tours | Travel Guide | Java Volcano Tour Operator",description:"JVTO route-safety standards, gear expectations, crew handling, and emergency response logic for East Java private tours."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),60038,a=>{a.n(a.i(63237))}];
+
+//# sourceMappingURL=src_app_travel-guide_safety-on-tours_layout_tsx_0qb_gwp._.js.map

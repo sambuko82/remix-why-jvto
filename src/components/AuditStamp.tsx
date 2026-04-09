@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { ShieldCheck } from 'lucide-react';
 
@@ -10,10 +12,10 @@ interface AuditStampProps {
 }
 
 export const AuditStamp = ({ 
-  title = "AUDIT_COMPLETE", 
-  subtitle = "Registry Verified 2026",
-  system = "JVTO_FORENSIC_V1.9",
-  node = "ID_JKT_01_SECURE",
+  title = "LAYER_READY", 
+  subtitle = "Reference Layer",
+  system = "JVTO_SITE_V1.0",
+  node = "EAST_JAVA_ACTIVE",
   className = ""
 }: AuditStampProps) => {
   return (
@@ -27,8 +29,9 @@ export const AuditStamp = ({
         </div>
       </div>
       <p className="mt-12 font-mono text-[11px] text-slate-500 uppercase tracking-widest">
-        System: {system} // Node: {node}
+        System: {system} // Layer: {node}
       </p>
     </div>
   );
 };
+

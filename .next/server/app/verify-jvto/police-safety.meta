@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/verify-jvto/layout,_N_T_/verify-jvto/police-safety/layout,_N_T_/verify-jvto/police-safety/page,_N_T_/verify-jvto/police-safety"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/verify-jvto/police-safety/__PAGE__",
+    "/verify-jvto/police-safety",
+    "/verify-jvto",
+    "/_index",
+    "/_head"
+  ]
+}

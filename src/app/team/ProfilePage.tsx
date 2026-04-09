@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { 
   ShieldCheck, 
@@ -65,7 +67,7 @@ export default function CrewProfile() {
             onClick={() => navigate('/')} 
             className="group inline-flex items-center gap-3 bg-authority-navy text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-safety-orange transition-all shadow-xl shadow-authority-navy/20"
           >
-            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" /> Return to Registry
+            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" /> Return to Team
           </button>
         </div>
       </div>
@@ -175,7 +177,7 @@ export default function CrewProfile() {
             onClick={() => navigate('/')}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-white transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" /> Back to Registry
+            <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" /> Back to Team
           </button>
           <div className="flex items-center gap-6">
             <div className="hidden md:flex items-center gap-2 text-verified-bright text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
@@ -185,7 +187,7 @@ export default function CrewProfile() {
               onClick={() => setShowSchema(!showSchema)}
               className="font-mono text-[11px] bg-white/5 hover:bg-white/10 text-verified-bright px-4 py-1.5 rounded-lg border border-white/10 transition-all flex items-center gap-2 uppercase tracking-widest"
             >
-              <Code className="h-3 w-3" /> {showSchema ? 'Close Graph' : 'Inspect Graph'}
+              <Code className="h-3 w-3" /> {showSchema ? 'Close Schema' : 'View Schema'}
             </button>
           </div>
         </div>
@@ -238,7 +240,7 @@ export default function CrewProfile() {
                   <div className="status-live"></div>
                   <span className="font-mono text-[11px] text-safety-orange uppercase tracking-widest font-black">Active_Duty_Status</span>
                 </div>
-                <div className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-2">Personnel ID</div>
+                <div className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-2">Team ID</div>
                 <div className="font-mono text-xl font-black text-white tracking-widest bg-white/5 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-sm">
                   {profileData.id.toUpperCase()}
                 </div>
@@ -293,8 +295,8 @@ export default function CrewProfile() {
                   <Activity className="w-10 h-10" />
                 </div>
                 <div>
-                  <h2 className="text-4xl font-black text-authority-navy uppercase leading-none mb-2 tracking-tighter">Safety Performance Audit</h2>
-                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">QUANTIFIED_TRUST_METRICS</p>
+                  <h2 className="text-4xl font-black text-authority-navy uppercase leading-none mb-2 tracking-tighter">Safety Performance</h2>
+                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">TEAM SAFETY METRICS</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 bg-slate-50 px-6 py-4 rounded-2xl border border-slate-100">
@@ -316,10 +318,10 @@ export default function CrewProfile() {
               </div>
               <div className="bg-slate-50 rounded-[2rem] p-10 border border-slate-100 flex flex-col justify-center">
                 <h3 className="text-sm font-black text-authority-navy uppercase mb-4 flex items-center gap-2">
-                  <Lock className="w-4 h-4 text-safety-orange" /> Forensic Insight
+                  <Lock className="w-4 h-4 text-safety-orange" /> Operational Insight
                 </h3>
                 <p className="text-xs text-slate-500 leading-relaxed italic">
-                  "These metrics are derived from a combination of field observation logs, guest feedback triangulation, and periodic technical assessments. The upward trend in historical data reflects our commitment to continuous safety training and operational refinement."
+                  "These metrics combine route observations, guest feedback, and internal performance tracking. They are used to keep field handling consistent rather than to present a glossy profile."
                 </p>
               </div>
             </div>
@@ -352,7 +354,7 @@ export default function CrewProfile() {
             </div>
             
             <p className="text-slate-500 text-2xl leading-tight font-light mb-16">
-              To operate legally within the Ijen crater, guides must hold active certification from HPWKI. {profileData.name}'s credentials are cryptographically tied to our entity graph.
+              To operate legally in Ijen, guides need the right local credential context. This profile shows the personnel record behind {profileData.name}'s field role.
             </p>
 
             <div className="bg-white/5 rounded-[3rem] p-10 border border-white/10 mt-auto group">
@@ -362,7 +364,7 @@ export default function CrewProfile() {
                   <p className="text-2xl font-black text-white uppercase tracking-tight">{profileData.credential.issuer}</p>
                 </div>
                 <div className="text-right">
-                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-3">Audit Status</p>
+                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-3">Status</p>
                   <div className="flex items-center gap-3 text-verified-bright font-black text-sm uppercase tracking-widest">
                     <div className="w-2.5 h-2.5 bg-verified-bright rounded-full animate-pulse"></div>
                     {profileData.credential.status}
@@ -385,7 +387,7 @@ export default function CrewProfile() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
                    <div className="bg-authority-navy/80 backdrop-blur-md text-white px-8 py-4 rounded-2xl text-[11px] font-black uppercase tracking-widest border border-white/10">
-                     Click to Inspect KTA
+                     Open Credential Card
                    </div>
                 </div>
               </div>
@@ -410,7 +412,7 @@ export default function CrewProfile() {
                 </div>
                 <div>
                   <h2 className="text-4xl font-black text-authority-navy uppercase leading-none mb-2 tracking-tighter">Guest Verification</h2>
-                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">TRIANGULATED_PROOF</p>
+                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">INDEPENDENT REVIEWS</p>
                 </div>
               </div>
               <div className="flex -space-x-1.5">
@@ -421,7 +423,7 @@ export default function CrewProfile() {
             </div>
 
             <p className="text-slate-500 text-2xl leading-tight font-light mb-16">
-              Algorithmic proof extracted directly from third-party review platforms confirming {profileData.name}'s specific competencies.
+              Independent review excerpts that mention {profileData.name}'s handling, support style, or route execution in the field.
             </p>
 
             {/* Review Controls */}
@@ -560,7 +562,7 @@ export default function CrewProfile() {
               ) : (
                 <div className="text-center py-24 text-slate-500 bento-card border-dashed border-2">
                   <div className="status-live mb-4 mx-auto"></div>
-                  <p className="font-mono text-[11px] uppercase tracking-widest text-slate-500">No specific reviews loaded for this profile yet.</p>
+                  <p className="font-mono text-[11px] uppercase tracking-widest text-slate-500">No profile-specific reviews are loaded yet.</p>
                 </div>
               )}
             </div>
@@ -569,7 +571,7 @@ export default function CrewProfile() {
         </div>
         
         {/* Footer Audit Stamp */}
-        <AuditStamp title="PERSONNEL_VERIFIED" subtitle="Roster Audit 2026" className="pt-16" />
+        <AuditStamp title="PROFILE_READY" subtitle="Field Team Layer" className="pt-16" />
       </main>
 
       {/* Asset Viewer Modal */}
@@ -585,3 +587,4 @@ export default function CrewProfile() {
     </div>
   );
 }
+

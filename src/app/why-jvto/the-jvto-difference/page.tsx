@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -32,10 +34,10 @@ export default function JVTODifference() {
             onClick={() => navigate('/why-jvto')}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Why JVTO Hub
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Why JVTO
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <Lock className="w-4 h-4" /> Protocol_Difference_v1.9
+            <Lock className="w-4 h-4" /> Standards Comparison
           </div>
         </div>
       </div>
@@ -55,7 +57,7 @@ export default function JVTODifference() {
             {meta?.h1 || 'INTEGRITY OVER SCALE.'}
           </h1>
           <p className="text-slate-500 text-xl leading-tight font-light max-w-2xl">
-            We are not a mass-market agency. We limit our tour capacity to ensure every guest receives police-led security and medical-grade screening. This is how we maintain a 100% safety record.
+            JVTO is built around route handling, screening discipline, and private-trip control. The difference is operational, not decorative.
           </p>
         </motion.div>
 
@@ -65,21 +67,21 @@ export default function JVTODifference() {
             <Target className="w-10 h-10 text-safety-orange mb-6" />
             <h3 className="text-xl font-black uppercase mb-4">Operational Certainty</h3>
             <p className="text-slate-500 text-sm leading-relaxed">
-              We prioritize safety over "summit fever". If conditions are dangerous, we stop. Period.
+              Departure handling is built around field conditions, guest readiness, and route realities rather than fixed promises.
             </p>
           </div>
           <div className="bento-card bg-audit-white p-10 border-2 border-slate-100">
             <Users className="w-10 h-10 text-safety-orange mb-6" />
             <h3 className="text-xl font-black uppercase mb-4">Private Exclusivity</h3>
             <p className="text-slate-500 text-sm leading-relaxed">
-              No strangers, no waiting, no compromised safety due to mixed-group dynamics.
+              Private trips reduce waiting, simplify coordination, and keep the route decision inside one group context.
             </p>
           </div>
           <div className="bento-card bg-audit-white p-10 border-2 border-slate-100">
             <Layers className="w-10 h-10 text-safety-orange mb-6" />
             <h3 className="text-xl font-black uppercase mb-4">All-Inclusive</h3>
             <p className="text-slate-500 text-sm leading-relaxed">
-              No surprise costs or mid-trip negotiations. Everything is covered upfront.
+              Pricing, support, and handling notes are explained before departure so the trip is not negotiated in the field.
             </p>
           </div>
         </div>
@@ -88,7 +90,7 @@ export default function JVTODifference() {
         <div className="space-y-12">
           <div className="flex items-center gap-2 mb-8">
             <ShieldCheck className="w-4 h-4 text-safety-orange" />
-            <h2 className="text-3xl font-black uppercase">Verified Claims</h2>
+            <h2 className="text-3xl font-black uppercase">Core Claims</h2>
           </div>
 
           {claims.map((claim, idx) => (
@@ -115,7 +117,7 @@ export default function JVTODifference() {
                   onClick={() => navigate(`/verify-jvto#${claim.evidenceAnchor}`)}
                   className="inline-flex items-center gap-3 text-[11px] font-mono font-bold text-safety-orange uppercase tracking-widest hover:gap-5 transition-all"
                 >
-                  Inspect Evidence <ChevronRight className="w-4 h-4" />
+                  Open Reference <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
             </motion.div>
@@ -124,7 +126,7 @@ export default function JVTODifference() {
 
         {/* Comparison Section */}
         <div className="mt-32">
-          <h2 className="text-4xl font-black uppercase mb-12 text-center">The Industry Standard vs. <span className="text-safety-orange">JVTO</span></h2>
+          <h2 className="text-4xl font-black uppercase mb-12 text-center">Typical Route Handling vs. <span className="text-safety-orange">JVTO</span></h2>
           <div className="grid md:grid-cols-2 gap-px bg-slate-200 rounded-[2rem] overflow-hidden border-2 border-slate-200 shadow-2xl">
             <div className="bg-audit-white p-12">
               <h4 className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-8">Typical Operators</h4>
@@ -144,7 +146,7 @@ export default function JVTODifference() {
               </ul>
             </div>
             <div className="bg-authority-navy p-12 text-white">
-              <h4 className="font-mono text-[11px] text-safety-orange uppercase tracking-widest mb-8">JVTO Protocol</h4>
+              <h4 className="font-mono text-[11px] text-safety-orange uppercase tracking-widest mb-8">JVTO Handling</h4>
               <ul className="space-y-6">
                 {[
                   '100% Private tours for your group only',
@@ -165,15 +167,16 @@ export default function JVTODifference() {
 
         {/* Final CTA */}
         <div className="mt-32 text-center">
-          <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-8">Ready to experience the difference?</p>
+          <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-8">Ready to review the route options?</p>
           <button 
-            onClick={() => navigate('/booking')}
+            onClick={() => navigate('/tours')}
             className="bg-safety-orange text-white px-12 py-6 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-2xl shadow-safety-orange/20"
           >
-            Book Your Expedition
+            Browse Tours
           </button>
         </div>
       </div>
     </div>
   );
 }
+

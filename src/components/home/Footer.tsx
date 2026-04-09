@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Lock, ShieldCheck, ChevronRight, HelpCircle } from 'lucide-react';
@@ -28,29 +30,28 @@ export const Footer = () => {
             <h4 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-8">Tours</h4>
             <ul className="space-y-4 text-sm text-slate-400 font-black uppercase tracking-tight">
               <li><button onClick={() => navigate('/tours')} className="hover:text-safety-orange transition-colors">All Tours</button></li>
-              <li><button onClick={() => navigate('/tours/from-surabaya')} className="hover:text-safety-orange transition-colors">From Surabaya</button></li>
-              <li><button onClick={() => navigate('/tours/from-bali')} className="hover:text-safety-orange transition-colors">From Bali</button></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-8">Learn</h4>
-            <ul className="space-y-4 text-sm text-slate-400 font-black uppercase tracking-tight">
-              <li><button onClick={() => navigate('/why-jvto')} className="hover:text-safety-orange transition-colors">Why JVTO</button></li>
-              <li><button onClick={() => navigate('/why-jvto/our-team')} className="hover:text-safety-orange transition-colors">Meet the Team</button></li>
-              <li><button onClick={() => navigate('/why-jvto/reviews')} className="hover:text-safety-orange transition-colors">Reviews</button></li>
+              <li><button onClick={() => navigate('/destinations')} className="hover:text-safety-orange transition-colors">Destinations</button></li>
               <li><button onClick={() => navigate('/travel-guide')} className="hover:text-safety-orange transition-colors">Travel Guide</button></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-8">Verify</h4>
+            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-8">Why JVTO</h4>
             <ul className="space-y-4 text-sm text-slate-400 font-black uppercase tracking-tight">
-              <li><button onClick={() => navigate('/verify-jvto')} className="hover:text-safety-orange transition-colors">Verify JVTO</button></li>
-              <li><button onClick={() => navigate('/policy/booking-payment-cancellation')} className="hover:text-safety-orange transition-colors">Booking Policy</button></li>
-              <li><button onClick={() => navigate('/policy/inclusions-exclusions')} className="hover:text-safety-orange transition-colors">Inclusions</button></li>
+              <li><button onClick={() => navigate('/why-jvto')} className="hover:text-safety-orange transition-colors">Why JVTO</button></li>
+              <li><button onClick={() => navigate('/team')} className="hover:text-safety-orange transition-colors">Field Team</button></li>
+              <li><button onClick={() => navigate('/why-jvto/reviews')} className="hover:text-safety-orange transition-colors">Reviews</button></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-8">Proof</h4>
+            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-8">Prepare & Book</h4>
+            <ul className="space-y-4 text-sm text-slate-400 font-black uppercase tracking-tight">
+              <li><button onClick={() => navigate('/travel-guide')} className="hover:text-safety-orange transition-colors">Travel Guide</button></li>
+              <li><button onClick={() => navigate('/policy')} className="hover:text-safety-orange transition-colors">Policy Pack</button></li>
+              <li><button onClick={() => navigate('/contact')} className="hover:text-safety-orange transition-colors">Contact JVTO</button></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-white/40 mb-8">External Proof</h4>
             <ul className="space-y-4 text-sm text-slate-400 font-black uppercase tracking-tight">
               {org.same_as_urls.map((url, i) => (
                 <li key={i}><a href={url} target="_blank" rel="noopener noreferrer" className="hover:text-safety-orange transition-colors">{url.split('/')[2]}</a></li>
@@ -73,10 +74,11 @@ export const Footer = () => {
           
           <div className="flex items-center gap-8">
              <button onClick={() => navigate('/policy/privacy')} className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-white transition-colors">Privacy</button>
-             <button onClick={() => navigate('/policy/terms')} className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-white transition-colors">Terms</button>
+             <button onClick={() => navigate('/policy')} className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-white transition-colors">Policy</button>
           </div>
         </div>
       </div>
     </footer>
   );
 };
+

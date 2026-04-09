@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -34,10 +36,10 @@ export default function SafetyLeadership() {
             onClick={() => navigate('/why-jvto')}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Why JVTO Hub
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Why JVTO
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <Lock className="w-4 h-4" /> Protocol_Safety_v1.9
+            <Lock className="w-4 h-4" /> Safety Leadership
           </div>
         </div>
       </div>
@@ -57,7 +59,7 @@ export default function SafetyLeadership() {
             {meta?.h1 || 'POLICE-LED SECURITY.'}
           </h1>
           <p className="text-slate-500 text-xl leading-tight font-light max-w-2xl">
-            We don't guess with your safety. Our operations are led by active Tourist Police personnel and supported by mandatory medical screening for all Ijen hikers.
+            Our route decisions are shaped by active Tourist Police coordination, real-time field judgment, and medical screening for Ijen departures where clearance is required.
           </p>
         </motion.div>
 
@@ -67,12 +69,11 @@ export default function SafetyLeadership() {
             <div className="scanline"></div>
             <div className="relative z-10">
               <div className="badge-eyebrow badge-eyebrow-orange mb-8">
-                <ShieldCheck className="w-3 h-3" /> State-Sanctioned Security
+                <ShieldCheck className="w-3 h-3" /> Police-Led Coordination
               </div>
               <h3 className="text-3xl font-black uppercase mb-6 leading-none">Police Command</h3>
               <p className="text-slate-500 text-lg font-light leading-tight mb-12">
-                Agung Sambuko (Mr. Sam) is an active member of the East Java Tourist Police Unit (Ditpamobvit), 
-                specializing in tourist safety and risk management.
+                Agung Sambuko (Mr. Sam) operates with direct Tourist Police context. That changes how routes are cleared, how disruptions are handled, and how group safety decisions are made on the ground.
               </p>
               <ul className="space-y-4 mb-12">
                 {SSOT.police_authority.features.map((feature, i) => (
@@ -85,7 +86,7 @@ export default function SafetyLeadership() {
                 onClick={() => navigate('/verify-jvto#police-safety')}
                 className="inline-flex items-center gap-3 text-[11px] font-mono font-bold text-safety-orange uppercase tracking-widest hover:gap-5 transition-all"
               >
-                Inspect Police Credentials <ChevronRight className="w-4 h-4" />
+                Open Police Proof <ChevronRight className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -99,8 +100,7 @@ export default function SafetyLeadership() {
                 <h4 className="text-xl font-black uppercase">Real-time Intel</h4>
               </div>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Direct access to volcanic hazard monitoring and emergency services coordination 
-                through official police channels.
+                Route changes, access issues, and crowd conditions can be evaluated faster when operations are coordinated through official safety channels.
               </p>
             </div>
             <div className="bento-card bg-audit-white p-10 border-2 border-slate-100">
@@ -111,8 +111,7 @@ export default function SafetyLeadership() {
                 <h4 className="text-xl font-black uppercase">Official Patrols</h4>
               </div>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Our routes are vetted and monitored by local authorities, ensuring 
-                compliance with all safety regulations.
+                Route handling is built around local authority realities, not generic tour assumptions or fixed departures.
               </p>
             </div>
           </div>
@@ -139,15 +138,14 @@ export default function SafetyLeadership() {
             <div className="max-w-md">
               <h3 className="text-2xl font-black text-authority-navy uppercase mb-4">The "Hard Stop" Policy</h3>
               <p className="text-slate-600 font-light leading-tight">
-                {SSOT.health_protocol.policy} We prioritize your life over the itinerary. 
-                Unfit guests are not permitted to climb.
+                {SSOT.health_protocol.policy} Route completion never overrides guest condition. If clearance is not met, the climb does not proceed.
               </p>
             </div>
             <button 
               onClick={() => navigate('/verify-jvto#safety')}
               className="bg-verified-bright text-white px-10 py-5 rounded-xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-verified-bright/20 flex items-center gap-3"
             >
-              Inspect Medical Proof <ChevronRight className="w-5 h-5" />
+              Open Screening Proof <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         </div>
@@ -178,7 +176,7 @@ export default function SafetyLeadership() {
                   onClick={() => navigate(`/verify-jvto#${claim.evidenceAnchor}`)}
                   className="inline-flex items-center gap-3 text-[11px] font-mono font-bold text-safety-orange uppercase tracking-widest hover:gap-5 transition-all"
                 >
-                  Inspect Evidence <ChevronRight className="w-4 h-4" />
+                  Open Reference <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
             </motion.div>
@@ -203,3 +201,4 @@ export default function SafetyLeadership() {
     </div>
   );
 }
+

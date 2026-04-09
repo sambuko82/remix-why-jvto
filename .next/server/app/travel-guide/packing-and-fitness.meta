@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/travel-guide/layout,_N_T_/travel-guide/packing-and-fitness/layout,_N_T_/travel-guide/packing-and-fitness/page,_N_T_/travel-guide/packing-and-fitness"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/travel-guide/packing-and-fitness/__PAGE__",
+    "/travel-guide/packing-and-fitness",
+    "/travel-guide",
+    "/_index",
+    "/_head"
+  ]
+}

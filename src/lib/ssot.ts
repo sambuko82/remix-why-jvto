@@ -989,7 +989,10 @@ export const SSOT = {
   },
   pages: {
     '/': {
-      h1: "Tourist Police-Led Private Volcano Tours in East Java",
+      title_tag: "Tourist Police-Led Private Volcano Tours in East Java | Java Volcano Tour Operator",
+      meta_description: "Private Bromo, Ijen & Tumpak Sewu tours from Surabaya or Bali. Tourist Police-led operator, doctor-backed Ijen screening, private-only routes, and proof before payment.",
+      canonical: "/",
+      h1: "Private Volcano Tours",
       hero_image: "jvto-hero-image"
     }
   },

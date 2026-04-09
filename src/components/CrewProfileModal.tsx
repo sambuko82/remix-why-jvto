@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ShieldCheck, MapPin, Award, Star, Phone, Mail } from 'lucide-react';
@@ -83,7 +85,7 @@ export const CrewProfileModal: React.FC<CrewProfileModalProps> = ({ crew, isOpen
                   </section>
 
                   <section>
-                    <h3 className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-bold mb-4">Official Credential</h3>
+                    <h3 className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-bold mb-4">Active Credential</h3>
                     <div className="p-4 bg-white/5 border border-white/10 rounded-md">
                       <div className="flex items-start gap-4">
                         <div className="p-2 bg-white/10 rounded-md">
@@ -140,7 +142,7 @@ export const CrewProfileModal: React.FC<CrewProfileModalProps> = ({ crew, isOpen
                   <div className="flex flex-wrap gap-4">
                     <button className="flex-1 bg-white text-black px-6 py-4 rounded-md font-bold text-sm uppercase tracking-wider hover:bg-white/90 transition-colors flex items-center justify-center gap-2">
                       <Mail className="w-4 h-4" />
-                      Request for My Tour
+                      Ask About This Team
                     </button>
                     <button className="px-6 py-4 border border-white/20 rounded-md text-white hover:bg-white/5 transition-colors flex items-center justify-center gap-2">
                       <Phone className="w-4 h-4" />
@@ -155,3 +157,4 @@ export const CrewProfileModal: React.FC<CrewProfileModalProps> = ({ crew, isOpen
     </AnimatePresence>
   );
 };
+

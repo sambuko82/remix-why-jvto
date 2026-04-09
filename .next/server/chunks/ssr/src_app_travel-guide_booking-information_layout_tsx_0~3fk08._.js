@@ -1,0 +1,3 @@
+module.exports=[87882,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/travel-guide/booking-information",{title:"Booking Information | Travel Guide | Java Volcano Tour Operator",description:"How JVTO booking works: deposits, final payment, confirmation flow, travel credit rules, and private-route handling."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),75128,a=>{a.n(a.i(87882))}];
+
+//# sourceMappingURL=src_app_travel-guide_booking-information_layout_tsx_0~3fk08._.js.map

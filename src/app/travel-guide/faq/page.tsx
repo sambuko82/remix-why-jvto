@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -48,10 +50,10 @@ export default function FAQPage() {
             onClick={() => navigate('/travel-guide')}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Travel Guide
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Travel Guide
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <Lock className="w-4 h-4" /> FAQ_Registry_v1.9
+            <Lock className="w-4 h-4" /> FAQ
           </div>
         </div>
       </div>
@@ -67,13 +69,13 @@ export default function FAQPage() {
         >
           <div className="flex items-center gap-2 mb-6">
             <HelpCircle className="w-4 h-4 text-safety-orange" />
-            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Knowledge Base</span>
+            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Common Questions</span>
           </div>
           <h1 className="text-4xl md:text-8xl font-black text-authority-navy mb-8 leading-[0.85] uppercase tracking-tighter">
             {meta?.h1 || 'COMMON QUESTIONS.'}
           </h1>
           <p className="text-slate-500 text-lg md:text-xl leading-tight font-light max-w-2xl">
-            Direct answers to the most frequent concerns about safety, logistics, and legal compliance. We believe in radical transparency.
+            Direct answers to the questions guests usually ask before choosing a route, confirming dates, or preparing for East Java conditions.
           </p>
         </motion.div>
 
@@ -84,7 +86,7 @@ export default function FAQPage() {
           </div>
           <input 
             type="text"
-            placeholder="SEARCH QUESTIONS OR KEYWORDS..."
+            placeholder="SEARCH QUESTIONS..."
             className="w-full bg-white border-2 border-slate-200 rounded-2xl py-4 md:py-6 pl-14 md:pl-16 pr-6 font-mono text-[10px] md:text-xs uppercase tracking-widest focus:border-safety-orange focus:ring-0 transition-all outline-none shadow-sm"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -142,7 +144,7 @@ export default function FAQPage() {
           {filteredFaqs.length === 0 && (
             <div className="text-center py-16 md:py-24 bg-audit-white rounded-3xl border-2 border-dashed border-slate-200">
               <Database className="w-12 h-12 text-slate-200 mx-auto mb-4" />
-              <p className="text-slate-400 font-mono text-[10px] md:text-xs uppercase tracking-widest">No matching records found.</p>
+              <p className="text-slate-400 font-mono text-[10px] md:text-xs uppercase tracking-widest">No matching questions found.</p>
             </div>
           )}
         </div>
@@ -157,23 +159,22 @@ export default function FAQPage() {
               </div>
               <h2 className="text-3xl md:text-4xl font-black uppercase leading-none mb-4">Still Have <br className="hidden md:block" />Questions?</h2>
               <p className="text-slate-500 text-base md:text-lg font-light leading-tight">
-                Message Mr. Sam directly on WhatsApp for real-time answers about your tour.
+                If the FAQ does not answer your case, message the team directly before you lock the route.
               </p>
             </div>
-            <a 
-              href="https://wa.me/6281235061451"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => navigate('/contact')}
               className="w-full md:w-auto bg-safety-orange hover:bg-safety-orange/90 text-white px-10 py-5 rounded-xl font-black uppercase tracking-wider transition-all shadow-xl shadow-safety-orange/20 flex items-center justify-center gap-3 group"
             >
-              Message Us <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+              Open Contact <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
         </div>
 
         {/* Footer Audit Stamp */}
-        <AuditStamp title="FAQ_VERIFIED" subtitle="Registry 2026" system="JVTO_DOCS_V1.9" />
+        <AuditStamp title="FAQ_VERIFIED" subtitle="Support Layer Ready" system="JVTO_GUIDE_V1.0" node="EAST_JAVA_FAQ" />
       </div>
     </div>
   );
 }
+

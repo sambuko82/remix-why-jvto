@@ -1,12 +1,18 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'motion/react';
-import { ShieldCheck, Award, FileText, ExternalLink, BadgeCheck, Scale } from 'lucide-react';
+import { ShieldCheck, Award, FileText, ExternalLink, BadgeCheck, Scale, CheckCircle2 } from 'lucide-react';
 import { SSOT } from '../../lib/ssot';
 
 export const FounderSpotlight = () => {
   const founder = SSOT.organization.founder;
   const portrait = SSOT.assets.find(a => a.slug === 'mr-sam-tourist-police-portrait');
-  const legalDoc = SSOT.assets.find(a => a.slug === 'sprin-polpar-png');
+  const proofLinks = [
+    { title: 'Legal proof', href: '/verify-jvto/legal' },
+    { title: 'Police-safety proof', href: '/verify-jvto/police-safety' },
+    { title: 'Field team context', href: '/team' },
+  ];
 
   return (
     <section className="section-spacing bg-white overflow-hidden relative">
@@ -100,28 +106,27 @@ export const FounderSpotlight = () => {
                 </p>
                 
                 <p className="body-text">
-                  His unique position allows JVTO to operate with a level of institutional trust and logistical precision that is unmatched in East Java. Every itinerary is vetted against real-time police intelligence and volcanic activity reports.
+                  His role changes how JVTO handles private routes. Safety decisions stay operational, Ijen seriousness is surfaced early, and guests are pointed toward proof before payment instead of being asked to trust the brand blindly.
                 </p>
               </div>
 
-              {/* Service Record Grid */}
               <div className="grid sm:grid-cols-2 gap-4 mb-10">
                 <div className="p-4 bg-slate-50 rounded-md border border-slate-100">
                   <div className="flex items-center gap-3 mb-2">
                     <Award className="w-4 h-4 text-safety-orange" />
-                    <span className="font-bold text-sm text-authority-navy uppercase tracking-tight">Police Liaison</span>
+                    <span className="font-bold text-sm text-authority-navy uppercase tracking-tight">Private-Only Handling</span>
                   </div>
                   <p className="text-xs text-slate-500 leading-relaxed">
-                    Direct coordination with park rangers and local authorities for emergency response.
+                    Routes are designed around dedicated handling, clear transfer logic, and adult decision-making rather than shared-tour shortcuts.
                   </p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-md border border-slate-100">
                   <div className="flex items-center gap-3 mb-2">
                     <FileText className="w-4 h-4 text-safety-orange" />
-                    <span className="font-bold text-sm text-authority-navy uppercase tracking-tight">Legal Compliance</span>
+                    <span className="font-bold text-sm text-authority-navy uppercase tracking-tight">Proof Ownership</span>
                   </div>
                   <p className="text-xs text-slate-500 leading-relaxed">
-                    Ensuring all permits, licenses, and insurance protocols meet strict national standards.
+                    Legal, police-safety, review, and history pages stay separated so guests can check claims directly before moving toward booking.
                   </p>
                 </div>
               </div>
@@ -136,17 +141,17 @@ export const FounderSpotlight = () => {
                   <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
                 
-                <div className="flex items-center gap-4">
-                  <div className="flex -space-x-3">
-                    {[1, 2, 3].map(i => (
-                      <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden shadow-card">
-                        <img src={`https://picsum.photos/seed/guest${i}/100/100`} alt="Guest" referrerPolicy="no-referrer" />
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-[11px] font-mono uppercase tracking-[0.15em] text-slate-400">
-                    Trusted by <span className="text-authority-navy font-black">5,000+</span> Travelers
-                  </p>
+                <div className="grid gap-2 text-left">
+                  {proofLinks.map((item) => (
+                    <button
+                      key={item.title}
+                      onClick={() => window.location.href = item.href}
+                      className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.15em] text-slate-500 hover:text-authority-navy transition-colors"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-safety-orange" />
+                      {item.title}
+                    </button>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -157,3 +162,4 @@ export const FounderSpotlight = () => {
     </section>
   );
 };
+

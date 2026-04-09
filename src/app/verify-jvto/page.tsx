@@ -1,13 +1,14 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Shield, FileCheck, ArrowLeft, ExternalLink, MapPin, FileText, Stethoscope, History, Lock, Fingerprint, Search, Database, ShieldCheck, CheckCircle2, Eye, Download, ChevronRight, Building2, Activity, UserCheck, MessageSquare, ClipboardList } from 'lucide-react';
+import { FileCheck, ArrowLeft, ExternalLink, History, Lock, Search, Database, ShieldCheck, CheckCircle2, ChevronRight, Building2, Activity, ClipboardList } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { SSOT } from '../../lib/ssot';
 import { PageSEO } from '../../components/PageSEO';
-import { EvidenceBadge, SectionHeading, HashBadge } from '../../components/ForensicUI';
+import { SectionHeading } from '../../components/ForensicUI';
 import { AuditStamp } from '../../components/AuditStamp';
 import { motion, AnimatePresence } from 'motion/react';
 import { AssetViewer } from '../../components/AssetViewer';
-import { BookingRail } from '../../components/BookingRail';
 import { AuditTrail } from '../../components/AuditTrail';
 import { AUDIT_LOGS } from '../../lib/auditLogs';
 import { ForensicAnnotation } from '../../types';
@@ -50,17 +51,17 @@ export default function VerifyJvto() {
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> <span className="hidden xs:inline">Back to </span>Hub
           </button>
           <div className="flex items-center gap-4 md:gap-8">
-            <button 
-              onClick={() => setIsAuditOpen(true)}
-              className="flex items-center gap-2 text-[10px] md:text-[11px] font-black text-safety-orange hover:text-authority-navy transition-all uppercase tracking-[0.2em] border border-safety-orange/20 px-3 md:px-5 py-2 rounded-md bg-safety-orange/5 shadow-card"
-            >
-              <ClipboardList className="w-4 h-4" /> <span className="hidden sm:inline">View Org Audit Trail</span><span className="sm:hidden">Audit</span>
-            </button>
-            <div className="flex items-center gap-2 md:gap-3 text-authority-navy text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em]">
-              <Lock className="w-4 h-4" /> <span className="hidden xs:inline">Forensic Registry</span><span className="xs:hidden">v1.9</span>
-            </div>
+          <button 
+            onClick={() => setIsAuditOpen(true)}
+            className="flex items-center gap-2 text-[10px] md:text-[11px] font-black text-safety-orange hover:text-authority-navy transition-all uppercase tracking-[0.2em] border border-safety-orange/20 px-3 md:px-5 py-2 rounded-md bg-safety-orange/5 shadow-card"
+          >
+            <ClipboardList className="w-4 h-4" /> <span className="hidden sm:inline">Open Verification Log</span><span className="sm:hidden">Log</span>
+          </button>
+          <div className="flex items-center gap-2 md:gap-3 text-authority-navy text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em]">
+            <Lock className="w-4 h-4" /> <span className="hidden xs:inline">Proof Library</span><span className="xs:hidden">v1.9</span>
           </div>
         </div>
+      </div>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 py-20 md:py-32 max-w-6xl relative z-10">
@@ -71,13 +72,13 @@ export default function VerifyJvto() {
           className="mb-20 md:mb-32 text-center"
         >
           <div className="badge-eyebrow bg-authority-navy text-white mb-10 mx-auto">
-            <Database className="w-3.5 h-3.5 md:w-4 md:h-4" /> Forensic Evidence Locker
+            <Database className="w-3.5 h-3.5 md:w-4 md:h-4" /> Verification Hub
           </div>
           <h1 className="text-4xl xs:text-5xl md:text-8xl font-black text-authority-navy mb-8 md:mb-12 leading-[0.85] uppercase tracking-tighter">
             {meta?.h1 || 'IMMUTABLE PROOF.'}
           </h1>
           <p className="body-text max-w-2xl mx-auto">
-            We believe trust is earned through evidence, not marketing. Every legal, medical, and operational claim we make is backed by verifiable artifacts in our Proof Vault.
+            This page gathers the documents, field records, and third-party references behind JVTO. Check legal status, police coordination, screening evidence, historical records, and partner affiliations before you choose a route.
           </p>
         </motion.div>
 
@@ -94,7 +95,7 @@ export default function VerifyJvto() {
           >
             <SectionHeading 
               title="License to Operate" 
-              subtitle="Official government authorizations and business certifications."
+              subtitle="Business permits, tourism permissions, and documents that confirm we are allowed to operate."
               badge="Legal_Compliance"
             />
             
@@ -134,7 +135,7 @@ export default function VerifyJvto() {
           >
             <SectionHeading 
               title="Legal Entity" 
-              subtitle="Official registration and identification of our business entity."
+              subtitle="Registration records that identify the company behind JVTO and its legal standing."
               badge="NIB_REGISTRATION"
             />
             
@@ -174,7 +175,7 @@ export default function VerifyJvto() {
           >
             <SectionHeading 
               title="Accountability" 
-              subtitle="Real-time field evidence and operational transparency logs."
+              subtitle="Field photos and operating records that show real tours, real handling, and real presence on the ground."
               badge="FIELD_EVIDENCE_LOGS"
             />
             
@@ -220,7 +221,7 @@ export default function VerifyJvto() {
           >
             <SectionHeading 
               title="Safety Protocols" 
-              subtitle="Comprehensive health screening and safety audit compliance."
+              subtitle="Medical screening and route-safety records used to support high-risk departures such as Ijen."
               badge="HEALTH_SCREENING_AUDIT"
             />
             
@@ -260,7 +261,7 @@ export default function VerifyJvto() {
           >
             <SectionHeading 
               title="Police Integration" 
-              subtitle="Direct coordination with Indonesian Tourist Police for maximum security."
+              subtitle="Evidence of coordination paths linked to Tourist Police authority and related field handling."
               badge="AUTHORITY_COMMAND_LOGS"
             />
             
@@ -300,7 +301,7 @@ export default function VerifyJvto() {
           >
             <SectionHeading 
               title="Team Credentials" 
-              subtitle="Verified professional licenses and certifications for all field personnel."
+              subtitle="Personnel records and professional credentials tied to the people who handle the route on the ground."
               badge="LICENSED_PERSONNEL"
             />
             
@@ -340,7 +341,7 @@ export default function VerifyJvto() {
           >
             <SectionHeading 
               title="Press & Recognition" 
-              subtitle="International and national media coverage of our operations."
+              subtitle="External references, media mentions, and recognition that support operator legitimacy."
               badge="THIRD_PARTY_VALIDATION"
             />
             
@@ -386,7 +387,7 @@ export default function VerifyJvto() {
           >
             <SectionHeading 
               title="History Proof" 
-              subtitle="Historical documentation of our long-standing presence in Indonesian tourism."
+              subtitle="Archived material showing continuity, operating history, and long-running presence in East Java tourism."
               badge="ARCHIVAL_CONTINUITY"
             />
             
@@ -432,7 +433,7 @@ export default function VerifyJvto() {
           >
             <SectionHeading 
               title="Partner Network" 
-              subtitle="Strategic affiliations with international tourism boards and organizations."
+              subtitle="Association memberships and partner links that support standards, access, and credibility."
               badge="VERIFIED_AFFILIATIONS"
             />
             
@@ -472,7 +473,7 @@ export default function VerifyJvto() {
           >
             <SectionHeading 
               title="Reputation" 
-              subtitle="Verified reviews and trust signals from global travel platforms."
+              subtitle="Independent places where guests can cross-check reputation without relying on on-site testimonials."
               badge="REVIEW_VERIFICATION_PATHS"
             />
             
@@ -481,10 +482,9 @@ export default function VerifyJvto() {
               <div className="w-20 h-20 bg-slate-50 rounded-md flex items-center justify-center text-slate-200 mx-auto mb-8 shadow-inner">
                 <Database className="w-10 h-10" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-black text-authority-navy uppercase mb-6 tracking-tight">Reputation Registry</h3>
+              <h3 className="text-2xl md:text-3xl font-black text-authority-navy uppercase mb-6 tracking-tight">Independent Review Paths</h3>
               <p className="text-slate-500 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
-                We are currently indexing review patterns across TripAdvisor, Google, and Booking.com. 
-                Use the links below to verify our reputation independently.
+                Do not trust our site alone. Check the platforms guests use independently, then return to the route that fits your dates and departure city.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a 
@@ -509,7 +509,12 @@ export default function VerifyJvto() {
         
         {/* Footer Audit Stamp */}
         <div className="mt-16 md:mt-0">
-          <AuditStamp />
+          <AuditStamp
+            title="PROOF_COMPLETE"
+            subtitle="Verification Layer Ready"
+            system="JVTO_VERIFY_V1.0"
+            node="EAST_JAVA_TRUST"
+          />
         </div>
       </div>
 
@@ -534,3 +539,4 @@ export default function VerifyJvto() {
     </div>
   );
 }
+

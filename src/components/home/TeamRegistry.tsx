@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { UserCheck, ShieldCheck, Activity } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -93,3 +95,4 @@ export const TeamRegistry = () => {
     </section>
   );
 };
+

@@ -1,0 +1,3 @@
+module.exports=[98553,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/travel-guide/weather-and-closures",{title:"Weather & Closures | Travel Guide | Java Volcano Tour Operator",description:"Live route context for East Java volcano tours: weather realities, closure logic, and why MAGMA-backed access checks belong before booking assumptions."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),24306,a=>{a.n(a.i(98553))}];
+
+//# sourceMappingURL=src_app_travel-guide_weather-and-closures_layout_tsx_0_ef3d-._.js.map

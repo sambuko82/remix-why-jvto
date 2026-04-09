@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { 
   ShieldCheck, 
@@ -30,7 +32,7 @@ export default function CommunityStandards() {
             onClick={onBack}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Trust Hub
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Why JVTO
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
             <Users className="w-4 h-4" /> Community Standards
@@ -52,7 +54,7 @@ export default function CommunityStandards() {
             {meta?.h1 || 'PARTNERS AS CONTEXT & ACCESS.'}
           </h1>
           <p className="text-2xl text-slate-500 max-w-2xl mx-auto leading-tight font-light">
-            ISIC, HPWKI, and INDECON—what they signal and how verification works. Our partnerships are not just logos; they represent our commitment to industry standards and local community integration.
+            ISIC, HPWKI, and INDECON are not decorative badges. They help explain access, context, and the wider network around how JVTO operates in East Java.
           </p>
         </motion.div>
 
@@ -68,7 +70,7 @@ export default function CommunityStandards() {
             </div>
             <div className="prose prose-slate max-w-none">
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                We are officially approved by HPWKI (Himpunan Pramuwisata Kawah Ijen), ensuring our operations meet the strict guidelines set for guiding in the Ijen Crater area.
+                HPWKI matters because it anchors Ijen operations in a real local-guiding context, not just a marketing claim about access.
               </p>
               {SSOT.proof_vault.partners.map((partner, i) => (
                 <div key={i} className="inline-flex items-center gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl">
@@ -79,7 +81,7 @@ export default function CommunityStandards() {
                     rel="noopener noreferrer"
                     className="text-[11px] font-mono font-bold text-safety-orange uppercase tracking-widest hover:underline"
                   >
-                    View Artifact &rarr;
+                    Open Reference &rarr;
                   </a>
                 </div>
               ))}
@@ -96,7 +98,7 @@ export default function CommunityStandards() {
             </div>
             <div className="prose prose-slate max-w-none">
               <p className="text-lg text-slate-600 leading-relaxed">
-                Our alignment with ISIC and INDECON signals our dedication to sustainable tourism and community-based development. These partnerships provide context to our operational philosophy, ensuring that our tours benefit the local economy and preserve the natural environment.
+                ISIC and INDECON add context to how JVTO positions student travel, responsible tourism, and local-community alignment. They are part of the support network around the operation.
               </p>
             </div>
           </section>
@@ -107,11 +109,12 @@ export default function CommunityStandards() {
         <div className="mt-32 pt-12 border-t border-slate-100 flex flex-col items-center">
           <div className="p-8 bento-card bg-audit-white border border-slate-200 rounded-3xl flex flex-col items-center">
             <Handshake className="w-12 h-12 text-safety-orange mb-4" />
-            <span className="text-2xl font-black text-authority-navy uppercase tracking-tighter leading-none mb-2">TRUSTED_COMMUNITY</span>
-            <span className="font-mono text-[10px] text-slate-500 tracking-[0.2em] uppercase">JVTO Standards 2026</span>
+            <span className="text-2xl font-black text-authority-navy uppercase tracking-tighter leading-none mb-2">NETWORK_READY</span>
+            <span className="font-mono text-[10px] text-slate-500 tracking-[0.2em] uppercase">Supporting Context Layer</span>
           </div>
         </div>
       </div>
     </div>
   );
 }
+

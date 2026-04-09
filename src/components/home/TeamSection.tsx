@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'motion/react';
 import { Shield, Award, MapPin, UserCheck, Star, ChevronRight, ExternalLink } from 'lucide-react';
@@ -204,3 +206,4 @@ export const TeamSection = () => {
     </section>
   );
 };
+

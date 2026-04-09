@@ -1,20 +1,43 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# remix-why-jvto
 
-# Run and deploy your AI Studio app
+Active JVTO frontend workspace.
 
-This contains everything you need to run your app locally.
+## Current Role
 
-View your app in AI Studio: https://ai.studio/apps/2a64a1ba-a75c-4bdb-abef-f0188196cc49
+- This repository is the only active frontend codebase.
+- Visual truth lives here.
+- Preview deployments are produced from this repository.
+
+## Source Model
+
+- `DB mirror`
+  - primary data source for staged/live-candidate content
+- `JVTO-Why-JVTO-Next15`
+  - reference for content structure and decision logic when needed
+- `jvto-web`
+  - reference for route reality and live-detail checks when needed
+
+Old frontend workspaces are not part of the active implementation path.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
-
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Copy env values:
+   `.env.example` -> `.env.local`
+3. Run:
    `npm run dev`
+
+## Key Scripts
+
+- `npm run dev`
+- `npm run build`
+- `npm run lint`
+- `npm run check:jvto:source`
+- `npm run deploy:preview`
+
+## Operational Notes
+
+- Local development may fall back to bundled data when `DB mirror` is unreachable.
+- Preview on Vercel is the main review rail for real environment checks.
+- `/ops/source-health` and `/api/source-health` are available for diagnostics.

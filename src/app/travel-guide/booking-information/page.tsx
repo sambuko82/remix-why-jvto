@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -53,10 +55,10 @@ export default function BookingInformation() {
             onClick={() => navigate('/travel-guide')}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Travel Guide
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Travel Guide
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <Lock className="w-4 h-4" /> Booking_Protocol_v1.9
+            <Lock className="w-4 h-4" /> Booking Information
           </div>
         </div>
       </div>
@@ -72,13 +74,13 @@ export default function BookingInformation() {
         >
           <div className="flex items-center gap-2 mb-6">
             <Clock className="w-4 h-4 text-safety-orange" />
-            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Operational Workflow</span>
+            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Booking Workflow</span>
           </div>
           <h1 className="text-4xl md:text-8xl font-black text-authority-navy mb-8 leading-[0.85] uppercase tracking-tighter">
             {meta?.h1 || 'HOW TO BOOK.'}
           </h1>
           <p className="text-slate-500 text-lg md:text-xl leading-tight font-light max-w-2xl">
-            A transparent, 4-step process designed for certainty. From initial inquiry to meeting your crew, we prioritize clarity and security.
+            A clear booking path from first inquiry to meeting your crew. Use this page to understand timing, payment stages, and the rules that matter before departure.
           </p>
         </motion.div>
 
@@ -117,7 +119,7 @@ export default function BookingInformation() {
         <div className="mb-24 md:mb-32">
           <div className="flex items-center gap-4 mb-12">
             <div className="h-px flex-1 bg-slate-200"></div>
-            <h2 className="text-xs font-mono font-bold uppercase tracking-[0.3em] text-slate-400">Core Policies</h2>
+          <h2 className="text-xs font-mono font-bold uppercase tracking-[0.3em] text-slate-400">Key Policies</h2>
             <div className="h-px flex-1 bg-slate-200"></div>
           </div>
           
@@ -153,8 +155,8 @@ export default function BookingInformation() {
               <FileText className="w-8 h-8" />
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl font-black uppercase leading-none mb-2 tracking-tight text-authority-navy">Full Policy Document</h2>
-              <p className="text-slate-500 text-base md:text-lg font-light leading-tight">Read the detailed legal terms for booking, payments, and cancellations.</p>
+              <h2 className="text-2xl md:text-3xl font-black uppercase leading-none mb-2 tracking-tight text-authority-navy">Detailed Booking Terms</h2>
+              <p className="text-slate-500 text-base md:text-lg font-light leading-tight">Open the full policy page for payment timing, cancellation handling, and travel-credit rules.</p>
             </div>
           </div>
           <div className="flex items-center gap-3 text-authority-navy font-mono text-[11px] font-bold uppercase tracking-widest">
@@ -163,8 +165,9 @@ export default function BookingInformation() {
         </motion.div>
 
         {/* Footer Audit Stamp */}
-        <AuditStamp title="BOOKING_VERIFIED" subtitle="Registry 2026" system="JVTO_DOCS_V1.9" />
+        <AuditStamp title="BOOKING_VERIFIED" subtitle="Support Layer Ready" system="JVTO_GUIDE_V1.0" node="EAST_JAVA_BOOKING" />
       </div>
     </div>
   );
 }
+

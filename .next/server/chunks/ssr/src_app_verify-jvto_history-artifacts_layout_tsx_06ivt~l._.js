@@ -1,0 +1,3 @@
+module.exports=[8e3,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/verify-jvto/history-artifacts",{title:"History Proof | Verify JVTO | Java Volcano Tour Operator",description:"Archived records, early references, and continuity artifacts that document JVTO operating history."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),41973,a=>{a.n(a.i(8e3))}];
+
+//# sourceMappingURL=src_app_verify-jvto_history-artifacts_layout_tsx_06ivt~l._.js.map

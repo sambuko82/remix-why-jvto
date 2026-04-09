@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { 
   History, 
@@ -59,10 +61,10 @@ export default function HistoryArtifactsProof() {
             onClick={onBack}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Proof Hub
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Verify Hub
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <History className="w-4 h-4" /> History & Artifacts Registry
+            <History className="w-4 h-4" /> History Proof
           </div>
         </div>
       </div>
@@ -79,7 +81,7 @@ export default function HistoryArtifactsProof() {
         >
           <div className="flex items-center gap-2 mb-6">
             <Library className="w-4 h-4 text-safety-orange" />
-            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Historical Documentation Archive</span>
+            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Continuity Records</span>
           </div>
           <h1 className="text-5xl md:text-9xl font-black text-authority-navy mb-8 leading-[0.85] uppercase tracking-tighter">
             {meta?.h1 || 'HISTORY & ARTIFACTS.'}
@@ -105,7 +107,7 @@ export default function HistoryArtifactsProof() {
                 </div>
                 <div>
                   <h2 className="text-3xl font-black text-authority-navy uppercase leading-none mb-1">Historical Artifacts</h2>
-                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">LEGACY_DOCUMENTATION_REGISTRY</p>
+                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">CONTINUITY_RECORDS</p>
                 </div>
               </div>
               <EvidenceBadge type="verified" text="Legacy Verified" />
@@ -133,7 +135,7 @@ export default function HistoryArtifactsProof() {
                   <div className="flex items-center justify-between pt-8 border-t border-slate-100">
                     <div className="flex items-center gap-3">
                       <Eye className="w-5 h-5 text-safety-orange" />
-                      <span className="font-mono text-[11px] uppercase tracking-widest font-black">Inspect Document</span>
+                      <span className="font-mono text-[11px] uppercase tracking-widest font-black">Open Record</span>
                     </div>
                     <HashBadge hash={item.hash || 'PENDING'} />
                   </div>
@@ -151,11 +153,11 @@ export default function HistoryArtifactsProof() {
             <div className="flex flex-col items-center">
               <Scroll className="w-20 h-20 text-safety-orange mb-8" />
               <span className="text-5xl font-black text-authority-navy uppercase tracking-tighter leading-none mb-3">LEGACY_VERIFIED</span>
-              <span className="font-mono text-[11px] text-slate-500 tracking-[0.4em] uppercase">Historical Archive 2026</span>
+              <span className="font-mono text-[11px] text-slate-500 tracking-[0.4em] uppercase">Historical Continuity Layer</span>
             </div>
           </div>
           <p className="mt-12 font-mono text-[11px] text-slate-500 uppercase tracking-widest">
-            System: JVTO_HISTORY_ARCHIVE_V1.0 // Node: ID_JKT_03_SECURE
+            System: JVTO_HISTORY_V1.0 // Node: EAST_JAVA_HISTORY
           </p>
         </div>
       </div>
@@ -173,3 +175,4 @@ export default function HistoryArtifactsProof() {
     </div>
   );
 }
+

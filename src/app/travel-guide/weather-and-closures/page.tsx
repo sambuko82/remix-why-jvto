@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { 
   CloudRain, 
@@ -64,7 +66,7 @@ export default function WeatherClosures() {
             {meta?.h1 || 'WEATHER & CLOSURES.'}
           </h1>
           <p className="text-lg md:text-2xl text-slate-500 max-w-2xl mx-auto leading-tight font-light">
-            Volcanic environments are unpredictable. We monitor weather patterns and official park closures in real-time to ensure your expedition only proceeds when conditions meet our strict safety thresholds.
+            Weather, access rules, and volcano conditions can change fast. Use this page to understand how closures and route adjustments are handled before departure.
           </p>
         </motion.div>
 
@@ -91,10 +93,11 @@ export default function WeatherClosures() {
           <div className="p-6 md:p-8 bento-card bg-audit-white border border-slate-200 rounded-2xl md:rounded-3xl flex flex-col items-center">
             <CloudRain className="w-10 h-10 md:w-12 md:h-12 text-safety-orange mb-3 md:mb-4" />
             <span className="text-xl md:text-2xl font-black text-authority-navy uppercase tracking-tighter leading-none mb-2">WEATHER_VERIFIED</span>
-            <span className="font-mono text-[9px] md:text-[10px] text-slate-500 tracking-[0.2em] uppercase">JVTO Weather 2026</span>
+              <span className="font-mono text-[9px] md:text-[10px] text-slate-500 tracking-[0.2em] uppercase">Route Access Layer</span>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
+

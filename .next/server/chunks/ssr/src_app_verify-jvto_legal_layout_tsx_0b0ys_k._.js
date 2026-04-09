@@ -1,0 +1,3 @@
+module.exports=[20435,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/verify-jvto/legal",{title:"Legal Proof | Verify JVTO | Java Volcano Tour Operator",description:"Business permits, operator records, and legal documents behind Java Volcano Tour Operator."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),6117,a=>{a.n(a.i(20435))}];
+
+//# sourceMappingURL=src_app_verify-jvto_legal_layout_tsx_0b0ys_k._.js.map

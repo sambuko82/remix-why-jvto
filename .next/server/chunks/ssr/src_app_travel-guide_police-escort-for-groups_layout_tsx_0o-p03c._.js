@@ -1,0 +1,3 @@
+module.exports=[16808,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/travel-guide/police-escort-for-groups",{title:"Police Escort for Groups | Travel Guide | Java Volcano Tour Operator",description:"When police escort support is relevant for JVTO groups, how coordination works, and how it fits into route handling."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),649,a=>{a.n(a.i(16808))}];
+
+//# sourceMappingURL=src_app_travel-guide_police-escort-for-groups_layout_tsx_0o-p03c._.js.map

@@ -1,0 +1,3 @@
+module.exports=[14712,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/why-jvto/community-standards",{title:"Community Standards & Supporting Network | Java Volcano Tour Operator",description:"Understand the standards, supporting affiliations, and partner context behind JVTO operations in East Java."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),65075,a=>{a.n(a.i(14712))}];
+
+//# sourceMappingURL=src_app_why-jvto_community-standards_layout_tsx_0nbe6ac._.js.map

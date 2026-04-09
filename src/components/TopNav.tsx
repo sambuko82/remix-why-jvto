@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ShieldCheck, Menu, X, MessageSquare, ChevronRight } from 'lucide-react';
@@ -37,7 +39,7 @@ export const TopNav = () => {
               <ShieldCheck className="w-4 h-4 md:w-5 md:h-5" />
             </div>
             <div>
-              <h1 className="font-black uppercase tracking-tighter leading-none text-white text-sm md:text-base">JVTO</h1>
+              <div className="font-black uppercase tracking-tighter leading-none text-white text-sm md:text-base">JVTO</div>
               <p className="font-mono text-[8px] md:text-[10px] uppercase tracking-widest text-slate-500">Java Volcano Tour Operator</p>
             </div>
           </div>
@@ -144,3 +146,4 @@ export const TopNav = () => {
     </>
   );
 };
+

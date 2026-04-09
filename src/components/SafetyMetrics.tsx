@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'motion/react';
 import { SafetyMetric } from '../types';
@@ -123,3 +125,4 @@ export const SafetyMetrics: React.FC<SafetyMetricsProps> = ({ metrics, compact =
     </div>
   );
 };
+

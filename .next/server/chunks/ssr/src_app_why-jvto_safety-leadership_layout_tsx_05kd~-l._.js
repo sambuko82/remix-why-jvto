@@ -1,0 +1,3 @@
+module.exports=[54861,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/why-jvto/safety-leadership",{title:"Safety Leadership | Why JVTO | Java Volcano Tour Operator",description:"How Tourist Police-led oversight shapes JVTO route handling, safety decisions, and field discipline across East Java private volcano tours."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),8204,a=>{a.n(a.i(54861))}];
+
+//# sourceMappingURL=src_app_why-jvto_safety-leadership_layout_tsx_05kd~-l._.js.map

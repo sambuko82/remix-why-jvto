@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { 
   Newspaper, 
@@ -30,7 +32,7 @@ import { HashBadge, EvidenceBadge } from '../../../components/ForensicUI';
 
 export default function PressRecognition() {
   const navigate = useNavigate();
-  const onBack = () => navigate('/');
+  const onBack = () => navigate('/verify-jvto');
   const [selectedAsset, setSelectedAsset] = useState<{ 
     url: string, 
     title: string, 
@@ -62,10 +64,10 @@ export default function PressRecognition() {
             onClick={onBack}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Hub
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Verify Hub
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <Globe className="w-4 h-4" /> Global Recognition Registry
+            <Globe className="w-4 h-4" /> Press & Recognition
           </div>
         </div>
       </div>
@@ -82,7 +84,7 @@ export default function PressRecognition() {
         >
           <div className="flex items-center gap-2 mb-6">
             <Database className="w-4 h-4 text-safety-orange" />
-            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Public Record Archive</span>
+            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Public References</span>
           </div>
           <h1 className="text-5xl md:text-9xl font-black text-authority-navy mb-8 leading-[0.85] uppercase tracking-tighter">
             {meta?.h1 || 'PRESS RECOGNITION.'}
@@ -121,7 +123,7 @@ export default function PressRecognition() {
                   <div className="flex items-center gap-4 mb-6">
                     <img src="https://stefan-loose.de/fileadmin/templates/images/logo.png" alt="Stefan Loose Logo" className="h-12 grayscale group-hover:grayscale-0 transition-all" referrerPolicy="no-referrer" />
                     <div className="h-8 w-[2px] bg-slate-200"></div>
-                    <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Independent Audit</span>
+                    <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Independent Reference</span>
                   </div>
                   <h3 className="text-4xl font-black text-authority-navy uppercase leading-none mb-6 tracking-tighter">
                     "The Best Choice in Bondowoso"
@@ -150,13 +152,13 @@ export default function PressRecognition() {
                     <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative z-10">
-                    <div className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-8">Archival Scan</div>
+                    <div className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-8">Guidebook Scan</div>
                     <div className="flex items-center justify-center h-64 border-2 border-dashed border-white/20 rounded-2xl mb-8">
                       <Eye className="w-16 h-16 text-white/20 group-hover:text-safety-orange group-hover:scale-110 transition-all duration-500" />
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-[11px] text-white uppercase tracking-widest font-black">Inspect Document</span>
-                      <div className="tech-badge bg-safety-orange text-white">LOUPE_ENABLED</div>
+                      <span className="font-mono text-[11px] text-white uppercase tracking-widest font-black">Open Reference</span>
+                      <div className="tech-badge bg-safety-orange text-white">GUIDEBOOK_RECORD</div>
                     </div>
                   </div>
                 </div>
@@ -178,7 +180,7 @@ export default function PressRecognition() {
                 </div>
                 <div>
                   <h2 className="text-3xl font-black text-authority-navy uppercase leading-none mb-1">Media Corroboration</h2>
-                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">POLICE_LED_OPERATIONS_NEWS</p>
+                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">POLICE_LED_ROUTE_COVERAGE</p>
                 </div>
               </div>
               <EvidenceBadge type="verified" text="Official Press" />
@@ -206,7 +208,7 @@ export default function PressRecognition() {
                   <div className="flex items-center justify-between pt-8 border-t border-current/10">
                     <div className="flex items-center gap-3">
                       <Eye className="w-5 h-5 text-safety-orange" />
-                      <span className="font-mono text-[11px] uppercase tracking-widest font-black">Inspect Source</span>
+                      <span className="font-mono text-[11px] uppercase tracking-widest font-black">Open Source</span>
                     </div>
                     <HashBadge hash="B257...B77" />
                   </div>
@@ -228,13 +230,13 @@ export default function PressRecognition() {
                   <Globe className="w-8 h-8" />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-black text-authority-navy uppercase leading-none mb-1">Guest Registry</h2>
-                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">TRIANGULATED_REVIEWS</p>
+                  <h2 className="text-3xl font-black text-authority-navy uppercase leading-none mb-1">Independent Review Paths</h2>
+                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">INDEPENDENT_REVIEW_PATHS</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-verified-bright" />
-                <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Verified by Booking.com</span>
+                <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Public-facing review reference</span>
               </div>
             </div>
 
@@ -273,7 +275,7 @@ export default function PressRecognition() {
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Sarah J. // London, UK</span>
-                      <div className="verified-badge bg-white/10 text-white border-white/10">VERIFIED</div>
+                      <div className="verified-badge bg-white/10 text-white border-white/10">REFERENCE</div>
                     </div>
                   </div>
                   <div className="p-8 bg-white/5 rounded-[2.5rem] border border-white/5 relative group">
@@ -283,7 +285,7 @@ export default function PressRecognition() {
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Marc D. // Paris, FR</span>
-                      <div className="verified-badge bg-white/10 text-white border-white/10">VERIFIED</div>
+                      <div className="verified-badge bg-white/10 text-white border-white/10">REFERENCE</div>
                     </div>
                   </div>
                 </div>
@@ -300,11 +302,11 @@ export default function PressRecognition() {
             <div className="flex flex-col items-center">
               <Globe className="w-20 h-20 text-safety-orange mb-8" />
               <span className="text-5xl font-black text-authority-navy uppercase tracking-tighter leading-none mb-3">RECORD_VERIFIED</span>
-              <span className="font-mono text-[11px] text-slate-500 tracking-[0.4em] uppercase">Public Registry 2026</span>
+              <span className="font-mono text-[11px] text-slate-500 tracking-[0.4em] uppercase">Public Reference Layer</span>
             </div>
           </div>
           <p className="mt-12 font-mono text-[11px] text-slate-500 uppercase tracking-widest">
-            System: JVTO_PRESS_ARCHIVE_V1.11 // Node: ID_JKT_01_SECURE
+            System: JVTO_PRESS_V1.0 // Node: EAST_JAVA_PUBLIC
           </p>
         </div>
       </div>
@@ -322,3 +324,4 @@ export default function PressRecognition() {
     </div>
   );
 }
+

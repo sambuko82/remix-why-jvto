@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'motion/react';
 import { Activity, Calendar, ChevronRight, Info } from 'lucide-react';
@@ -55,3 +57,4 @@ export const AuthorityStickyBar = () => {
     </div>
   );
 };
+

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Search, ShieldCheck, Lock, Activity, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -15,14 +17,14 @@ export const VerifyCTA = () => {
           
           <div className="relative z-10 max-w-3xl">
             <div className="badge-eyebrow badge-eyebrow-orange mb-6 md:mb-8">
-              <Lock className="w-3 h-3" /> System Audit Ready
+              <Lock className="w-3 h-3" /> Verification Layer
             </div>
             <h2 className="text-3xl xs:text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-6 md:mb-8">
-              Ready to <br />
-              <span className="text-safety-orange text-4xl xs:text-5xl md:text-8xl">Audit Our System?</span>
+              Verify the operator <br />
+              <span className="text-safety-orange text-4xl xs:text-5xl md:text-8xl">Before Payment.</span>
             </h2>
             <p className="text-lg md:text-2xl text-slate-300 mb-10 md:mb-12 leading-tight font-light">
-              Don't take our word for it. Audit our legal entity, police liaison, and medical protocols in real-time.
+              If the route already fits, use the verification hub for the final trust check: legal identity, police-safety context, press references, and historical continuity.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -30,7 +32,7 @@ export const VerifyCTA = () => {
                 onClick={() => navigate('/verify-jvto')}
                 className="w-full sm:w-auto bg-safety-orange hover:bg-safety-orange/90 text-white px-8 md:px-10 py-4 md:py-5 rounded-md font-black uppercase tracking-wider text-xs md:text-sm transition-all shadow-hover shadow-safety-orange/20 flex items-center justify-center gap-3 group"
               >
-                <Search className="w-5 h-5 group-hover:scale-110 transition-transform" /> Start Forensic Audit
+                <Search className="w-5 h-5 group-hover:scale-110 transition-transform" /> Open Verify Hub
               </button>
               <button 
                 onClick={() => navigate('/why-jvto/the-jvto-difference')}
@@ -53,3 +55,4 @@ export const VerifyCTA = () => {
     </section>
   );
 };
+

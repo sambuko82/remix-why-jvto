@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { SSOT } from '../lib/ssot';
 
 interface PageSEOProps {
@@ -14,29 +15,11 @@ interface PageSEOProps {
 }
 
 export const PageSEO: React.FC<PageSEOProps> = ({ route, schema, metaOverride }) => {
-  const meta = route ? SSOT.pages[route] : null;
-  
-  if (!meta && !metaOverride) {
-    if (route) console.warn(`Metadata not found for route: ${route}`);
-    return null;
-  }
+  void route;
+  void metaOverride;
+  void SSOT;
 
-  const title = metaOverride?.title_tag || meta?.title_tag;
-  const description = metaOverride?.meta_description || meta?.meta_description;
-  const canonical = metaOverride?.canonical || meta?.canonical;
-  const robots = metaOverride?.robots || meta?.robots;
+  if (!schema) return null;
 
-  return (
-    <Helmet>
-      {title && <title>{title}</title>}
-      {description && <meta name="description" content={description} />}
-      {canonical && <link rel="canonical" href={canonical} />}
-      {robots && <meta name="robots" content={robots} />}
-      {schema && (
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      )}
-    </Helmet>
-  );
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 };

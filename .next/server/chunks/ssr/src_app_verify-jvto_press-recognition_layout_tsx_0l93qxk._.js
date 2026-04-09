@@ -1,0 +1,3 @@
+module.exports=[59340,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/verify-jvto/press-recognition",{title:"Press & Recognition | Verify JVTO | Java Volcano Tour Operator",description:"Public references, media mentions, and supporting recognition connected to JVTO and its East Java operations."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),47190,a=>{a.n(a.i(59340))}];
+
+//# sourceMappingURL=src_app_verify-jvto_press-recognition_layout_tsx_0l93qxk._.js.map

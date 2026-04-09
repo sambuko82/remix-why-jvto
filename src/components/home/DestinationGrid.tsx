@@ -1,10 +1,13 @@
+'use client';
+
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ChevronRight, MapPin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { SSOT } from '../../lib/ssot';
+import type { HomeDestinationItem } from '../../lib/homepage-data';
 
-const DestinationCard = ({ dest, idx, navigate }: { dest: any, idx: number, navigate: any }) => {
+const DestinationCard = ({ dest, idx, navigate }: { dest: HomeDestinationItem, idx: number, navigate: (to: string) => void }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -64,8 +67,13 @@ const DestinationCard = ({ dest, idx, navigate }: { dest: any, idx: number, navi
   );
 };
 
-export const DestinationGrid = () => {
-  const navigate = useNavigate();
+type DestinationGridSectionProps = {
+  destinations: HomeDestinationItem[];
+  navigate: (to: string) => void;
+};
+
+function DestinationGridSection({ destinations, navigate }: DestinationGridSectionProps) {
+  if (!destinations.length) return null;
 
   return (
     <section className="section-spacing bg-white relative overflow-hidden">
@@ -86,14 +94,30 @@ export const DestinationGrid = () => {
         </div>
       </div>
 
-      {/* Full-bleed scrollable container */}
       <div className="w-full pl-4 md:pl-6 lg:pl-[calc((100vw-80rem)/2+1.5rem)]">
         <div className="flex overflow-x-auto gap-4 pb-8 pr-4 md:pr-6 snap-x hide-scrollbar">
-          {SSOT.destinations.map((dest, idx) => (
-            <DestinationCard key={dest.slug} dest={dest} idx={idx} navigate={navigate} />
+          {destinations.map((dest, idx) => (
+            <DestinationCard key={dest.id} dest={dest} idx={idx} navigate={navigate} />
           ))}
         </div>
       </div>
     </section>
   );
+}
+
+type DestinationGridProps = {
+  destinations?: HomeDestinationItem[];
 };
+
+export const DestinationGrid = ({ destinations }: DestinationGridProps) => {
+  const navigate = useNavigate();
+  const fallbackDestinations = SSOT.destinations.map((dest) => ({
+    id: dest.slug,
+    name: dest.name,
+    highlight: dest.highlight,
+    image: dest.image,
+    route: dest.route,
+  }));
+  return <DestinationGridSection destinations={destinations?.length ? destinations : fallbackDestinations} navigate={navigate} />;
+};
+

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -33,10 +35,10 @@ export default function OurStory() {
             onClick={() => navigate('/why-jvto')}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Why JVTO Hub
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Why JVTO
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <Lock className="w-4 h-4" /> Protocol_History_v1.9
+            <Lock className="w-4 h-4" /> Operating History
           </div>
         </div>
       </div>
@@ -56,7 +58,7 @@ export default function OurStory() {
             {meta?.h1 || 'PROVEN HERITAGE.'}
           </h1>
           <p className="text-slate-500 text-xl leading-tight font-light max-w-2xl">
-            JVTO was founded by Bripka Agung Sambuko of the East Java Tourist Police. What started as a mission to protect travelers became the region's most trusted private tour operator.
+            JVTO did not appear as a template brand. It was built around real field coordination, local authority context, and years of route handling in East Java.
           </p>
         </motion.div>
 
@@ -70,11 +72,11 @@ export default function OurStory() {
               </div>
               <h3 className="text-3xl font-black uppercase mb-4 leading-none">{SSOT.history.award2015.title}</h3>
               <p className="text-slate-500 text-lg font-light leading-tight mb-8">
-                Recognized for excellence with a score of {SSOT.history.award2015.score} in {SSOT.history.award2015.year}.
+                A documented recognition point in {SSOT.history.award2015.year}, showing that JVTO's operating standards were visible well before the current site version.
               </p>
               <div className="flex items-center gap-4 pt-6 border-t border-slate-50">
                 <Calendar className="w-4 h-4 text-slate-300" />
-                <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Registry_2015</span>
+                <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Record 2015</span>
               </div>
             </div>
           </div>
@@ -87,14 +89,14 @@ export default function OurStory() {
               </div>
               <h3 className="text-3xl font-black uppercase mb-4 leading-none">{SSOT.history.book2016.title}</h3>
               <p className="text-slate-500 text-lg font-light leading-tight mb-8">
-                Featured in the 4th Edition of Stefan Loose Reiseführer Indonesien (Page {SSOT.history.book2016.page}).
+                Included in the 4th Edition of Stefan Loose Reiseführer Indonesien, adding an external travel-reference layer to JVTO's continuity record.
               </p>
               <div className="p-6 bg-white/5 rounded-xl border border-white/10 mb-8 italic text-slate-500 text-sm leading-relaxed">
                 "{SSOT.history.book2016.quote}"
               </div>
               <div className="flex items-center gap-4 pt-6 border-t border-white/10">
                 <Globe className="w-4 h-4 text-slate-500" />
-                <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Global_Recognition</span>
+                <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Guidebook Reference</span>
               </div>
             </div>
           </div>
@@ -132,7 +134,7 @@ export default function OurStory() {
                   onClick={() => navigate('/verify-jvto#press')}
                   className="inline-flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 uppercase tracking-widest hover:text-safety-orange transition-all"
                 >
-                  View Original Artifact <ChevronRight className="w-4 h-4" />
+                  Open Reference <ChevronRight className="w-4 h-4" />
                 </button>
               </motion.div>
             ))}
@@ -165,7 +167,7 @@ export default function OurStory() {
                   onClick={() => navigate(`/verify-jvto#${claim.evidenceAnchor}`)}
                   className="inline-flex items-center gap-3 text-[11px] font-mono font-bold text-safety-orange uppercase tracking-widest hover:gap-5 transition-all"
                 >
-                  Inspect Evidence <ChevronRight className="w-4 h-4" />
+                  Open Reference <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
             </motion.div>
@@ -174,19 +176,19 @@ export default function OurStory() {
 
         {/* Final CTA */}
         <div className="mt-32 p-12 bg-audit-white border-4 border-slate-100 rounded-[3rem] text-center">
-          <h3 className="text-3xl font-black uppercase mb-6">Explore the Full Proof Vault</h3>
+          <h3 className="text-3xl font-black uppercase mb-6">Open The Full Proof Layer</h3>
           <p className="text-slate-500 text-lg font-light leading-tight mb-12 max-w-2xl mx-auto">
-            Our history is just one layer of the Trust Stack. Access the centralized 
-            registry of all legal, medical, and operational evidence.
+            History is one part of the trust layer. The rest lives in legal proof, screening proof, police coordination, press references, and partner context.
           </p>
           <button 
             onClick={() => navigate('/verify-jvto')}
             className="bg-authority-navy text-white px-12 py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-safety-orange transition-all shadow-2xl"
           >
-            Access Proof Vault
+            Open Verify Hub
           </button>
         </div>
       </div>
     </div>
   );
 }
+

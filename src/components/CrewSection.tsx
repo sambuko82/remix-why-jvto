@@ -1,8 +1,10 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { SSOT } from '../lib/ssot';
 import { CrewProfileModal } from './CrewProfileModal';
-import { ShieldCheck, ArrowUpRight, Star, Quote, Users, ChevronRight } from 'lucide-react';
+import { ShieldCheck, Users, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export const CrewSection: React.FC = () => {
@@ -28,11 +30,11 @@ export const CrewSection: React.FC = () => {
             </div>
             <h2 className="heading-section">
               MEET THE <br />
-              <span className="text-safety-orange">VANGUARD.</span>
+              <span className="text-safety-orange">FIELD TEAM.</span>
             </h2>
           </div>
           <p className="body-text max-w-sm">
-            Our crew isn't just a team; they are the heart of our mission. Every guide and driver is vetted, licensed, and deeply committed to your safety.
+            These are the guides and drivers who execute the route on the ground. Use the team registry to see who handles guests, transfers, and route support.
           </p>
         </div>
 
@@ -101,10 +103,10 @@ export const CrewSection: React.FC = () => {
             onClick={() => navigate('/team')}
             className="w-full sm:w-auto bg-safety-orange hover:bg-orange-600 text-white px-12 py-6 rounded-md font-black uppercase tracking-[0.2em] text-sm transition-all shadow-hover shadow-safety-orange/20 flex items-center justify-center gap-4 mx-auto group"
           >
-            Explore Full Team Registry <ChevronRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+            Open Field Team <ChevronRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
           </button>
           <p className="mt-8 text-slate-400 font-mono text-[10px] font-black uppercase tracking-[0.25em]">
-            Total Operational Force: {SSOT.crew.length} Verified Members
+            Team layer: {SSOT.crew.length} active profiles
           </p>
         </motion.div>
       </div>
@@ -120,3 +122,4 @@ export const CrewSection: React.FC = () => {
     </section>
   );
 };
+

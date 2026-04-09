@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Quote, Fingerprint, ShieldCheck, ChevronRight, Search, Star } from 'lucide-react';
@@ -51,7 +53,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({ crew, index, compact = false
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-authority-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
             <div className="w-full bg-safety-orange text-white font-black py-4 rounded-md text-xs uppercase tracking-widest flex items-center justify-center gap-2 shadow-card">
-              Inspect Profile {compact ? <Search className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
+              Open Profile {compact ? <Search className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
             </div>
           </div>
         </div>
@@ -72,7 +74,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({ crew, index, compact = false
               onClick={handleAuditClick}
               className="verified-badge hover:bg-verified-bright hover:text-white transition-colors flex items-center gap-2 group/badge"
             >
-              VERIFIED_OPERATIVE
+              FIELD_READY
               <ShieldCheck className="w-3 h-3 group-hover/badge:scale-110 transition-transform" />
             </button>
             {avgRating && (
@@ -98,7 +100,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({ crew, index, compact = false
           <div className="flex items-center justify-between pt-6 border-t border-slate-100">
             <div className="flex items-center gap-2">
               <Fingerprint className="w-4 h-4 text-slate-300" />
-              <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Hash: {crew.id.slice(0, 8)}</span>
+              <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">Team ID: {crew.id.slice(0, 8)}</span>
             </div>
             <ShieldCheck className="w-4 h-4 text-verified-bright" />
           </div>
@@ -115,3 +117,4 @@ export const TeamCard: React.FC<TeamCardProps> = ({ crew, index, compact = false
     </>
   );
 };
+

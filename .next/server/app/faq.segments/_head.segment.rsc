@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/1154zqz0_a1n6.js","/_next/static/chunks/0vm9.qtjd.8ja.js","/_next/static/chunks/00-csyj9a6t-x.js"],"ViewportBoundary"]
+3:I[97367,["/_next/static/chunks/1154zqz0_a1n6.js","/_next/static/chunks/0vm9.qtjd.8ja.js","/_next/static/chunks/00-csyj9a6t-x.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Java Volcano Tour Operator"}],["$","meta","1",{"name":"description","content":"Java Volcano Tour Operator (JVTO) is a registered Indonesian travel company based in Bondowoso and led by an active Tourist Police officer. We design private, all-inclusive itineraries to Mount Bromo, Ijen Crater and Tumpak Sewu with clear safety rules, transparent pricing and real local impact."}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"BHEEoQ6oYlzDTYragdEFZ"}

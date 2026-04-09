@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/travel-guide/layout,_N_T_/travel-guide/page,_N_T_/travel-guide"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/travel-guide/__PAGE__",
+    "/travel-guide",
+    "/_index",
+    "/_head"
+  ]
+}

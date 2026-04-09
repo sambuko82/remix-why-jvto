@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -106,3 +108,4 @@ export const TrustStack = () => {
     </section>
   );
 };
+

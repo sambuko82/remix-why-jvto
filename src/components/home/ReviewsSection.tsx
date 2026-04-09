@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
 import { Star, ShieldCheck, ExternalLink, MessageSquare, CheckCircle2 } from 'lucide-react';
@@ -6,8 +8,6 @@ import { SSOT } from '../../lib/ssot';
 const PLATFORMS = [
   {
     name: "Google Maps",
-    rating: "5.0",
-    reviews: "240+",
     color: "bg-[#4285F4]",
     url: SSOT.organization.same_as_urls.find(u => u.includes('google.com')) || "#",
     icon: (
@@ -23,8 +23,6 @@ const PLATFORMS = [
   },
   {
     name: "Trustpilot",
-    rating: "4.9",
-    reviews: "180+",
     color: "bg-[#00b67a]",
     url: SSOT.organization.same_as_urls.find(u => u.includes('trustpilot.com')) || "#",
     icon: (
@@ -37,8 +35,6 @@ const PLATFORMS = [
   },
   {
     name: "TripAdvisor",
-    rating: "5.0",
-    reviews: "320+",
     color: "bg-[#34E0A1]",
     url: SSOT.organization.same_as_urls.find(u => u.includes('tripadvisor.com')) || "#",
     icon: (
@@ -89,14 +85,14 @@ export const ReviewsSection = () => {
           {/* LEFT: Trust Signals */}
           <div className="lg:col-span-5">
             <div className="badge-eyebrow bg-authority-navy text-white mb-8">
-              <ShieldCheck className="w-3 h-3" /> External Verification Hub
+              <ShieldCheck className="w-3 h-3" /> Independent Review Paths
             </div>
             <h2 className="heading-section mb-8">
               Verified <br />
               <span className="text-safety-orange">Trust Signals.</span>
             </h2>
             <p className="body-text mb-12 max-w-md">
-              Our reputation is built on transparency. We don't host reviews ourselves—we invite you to audit our performance on the world's most trusted independent platforms.
+              Our reputation should be checked outside this site. Use the same independent platforms other guests use, then compare them with the rest of the trust layer.
             </p>
 
             <div className="space-y-6">
@@ -125,7 +121,7 @@ export const ReviewsSection = () => {
                           ))}
                         </div>
                         <span className="font-mono text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
-                          {platform.rating} • {platform.reviews}
+                          Independent platform
                         </span>
                       </div>
                     </div>
@@ -203,14 +199,14 @@ export const ReviewsSection = () => {
             >
               <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="text-center sm:text-left relative z-10">
-                <h4 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-3 leading-none">Ready to audit us?</h4>
-                <p className="text-white/60 text-base font-light">Explore 700+ verified guest experiences across all platforms.</p>
+                <h4 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-3 leading-none">Check The Review Layer</h4>
+                <p className="text-white/60 text-base font-light">Start with independent platforms, then return to the proof and route pages.</p>
               </div>
               <a 
                 href="/why-jvto/reviews" 
                 className="px-10 py-5 bg-safety-orange hover:bg-orange-600 text-white rounded-md font-black uppercase tracking-[0.2em] text-sm hover:scale-105 transition-all relative z-10 shadow-hover shadow-safety-orange/20"
               >
-                View All Reviews
+                Open Review References
               </a>
             </motion.div>
           </div>
@@ -220,3 +216,4 @@ export const ReviewsSection = () => {
     </section>
   );
 };
+

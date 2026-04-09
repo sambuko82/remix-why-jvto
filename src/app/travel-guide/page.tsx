@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -49,10 +51,10 @@ export default function TravelGuideHub() {
             onClick={() => navigate('/')}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Hub
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Site
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <Lock className="w-4 h-4" /> Guide_Registry_v1.9
+            <Lock className="w-4 h-4" /> Travel Guide
           </div>
         </div>
       </div>
@@ -74,7 +76,7 @@ export default function TravelGuideHub() {
             {meta?.h1 || 'EXPEDITION KNOWLEDGE.'}
           </h1>
           <p className="text-slate-500 text-lg md:text-xl leading-tight font-light max-w-2xl">
-            Everything you need to know about safety, logistics, and operational standards for your East Java journey. No marketing fluff—just the facts.
+            Everything you need to know before booking or joining a JVTO route: safety rules, booking process, weather realities, police escort context, and fitness expectations.
           </p>
         </motion.div>
 
@@ -82,7 +84,7 @@ export default function TravelGuideHub() {
           {guideCategories.map((category, catIdx) => (
             <div key={category.id}>
               <div className="mb-8 md:mb-12">
-                <h2 className="text-2xl md:text-3xl font-black text-authority-navy uppercase tracking-tight mb-4">{category.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-authority-navy uppercase tracking-tight mb-4">{category.title}</h2>
                 <p className="text-slate-500 font-light text-sm md:text-base">{category.description}</p>
               </div>
               
@@ -127,7 +129,7 @@ export default function TravelGuideHub() {
             </div>
             <div>
               <h2 className="text-2xl md:text-3xl font-black uppercase leading-none mb-2 tracking-tight">Frequently Asked Questions</h2>
-              <p className="text-slate-500 text-base md:text-lg font-light leading-tight">Direct answers to common concerns about Bromo and Ijen tours.</p>
+              <p className="text-slate-500 text-base md:text-lg font-light leading-tight">Quick answers to the questions guests usually ask before they commit to a route.</p>
             </div>
           </div>
           <div className="flex items-center gap-3 text-safety-orange font-mono text-[11px] font-bold uppercase tracking-widest">
@@ -136,8 +138,9 @@ export default function TravelGuideHub() {
         </motion.div>
 
         {/* Footer Audit Stamp */}
-        <AuditStamp title="GUIDE_VERIFIED" subtitle="Registry 2026" system="JVTO_DOCS_V1.9" />
+        <AuditStamp title="GUIDE_VERIFIED" subtitle="Support Layer Ready" system="JVTO_GUIDE_V1.0" node="EAST_JAVA_SUPPORT" />
       </div>
     </div>
   );
 }
+

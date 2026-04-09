@@ -1,0 +1,329 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/verify",
+      "destination": "/verify-jvto",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/verify(?:/)?$"
+    },
+    {
+      "source": "/ijen-health-screening",
+      "destination": "/travel-guide/ijen-health-screening",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/ijen-health-screening(?:/)?$"
+    },
+    {
+      "source": "/press",
+      "destination": "/verify-jvto/press-recognition",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/press(?:/)?$"
+    },
+    {
+      "source": "/faq",
+      "destination": "/travel-guide/faq",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/faq(?:/)?$"
+    },
+    {
+      "source": "/why-jvto/our-team",
+      "destination": "/team",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/why-jvto/our-team(?:/)?$"
+    },
+    {
+      "source": "/why-jvto/proof-transparency",
+      "destination": "/verify-jvto",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/why-jvto/proof-transparency(?:/)?$"
+    },
+    {
+      "source": "/why-jvto/local-team-operations",
+      "destination": "/team",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/why-jvto/local-team-operations(?:/)?$"
+    },
+    {
+      "source": "/tour/:slug",
+      "destination": "/tours",
+      "statusCode": 307,
+      "regex": "^(?!/_next)/tour(?:/([^/]+?))(?:/)?$"
+    },
+    {
+      "source": "/crew/:crewId",
+      "destination": "/team/:crewId",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/crew(?:/([^/]+?))(?:/)?$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/destinations/[destinationId]",
+      "regex": "^/destinations/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPdestinationId": "nxtPdestinationId"
+      },
+      "namedRegex": "^/destinations/(?<nxtPdestinationId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/team/[crewId]",
+      "regex": "^/team/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcrewId": "nxtPcrewId"
+      },
+      "namedRegex": "^/team/(?<nxtPcrewId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/tours/[departure]/[slug]",
+      "regex": "^/tours/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPdeparture": "nxtPdeparture",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/tours/(?<nxtPdeparture>[^/]+?)/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/source-health",
+      "regex": "^/api/source\\-health(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/source\\-health(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/destinations",
+      "regex": "^/destinations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/destinations(?:/)?$"
+    },
+    {
+      "page": "/faq",
+      "regex": "^/faq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/faq(?:/)?$"
+    },
+    {
+      "page": "/isic/student-package",
+      "regex": "^/isic/student\\-package(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/isic/student\\-package(?:/)?$"
+    },
+    {
+      "page": "/ops/source-health",
+      "regex": "^/ops/source\\-health(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ops/source\\-health(?:/)?$"
+    },
+    {
+      "page": "/policy",
+      "regex": "^/policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policy(?:/)?$"
+    },
+    {
+      "page": "/policy/booking-payment-cancellation",
+      "regex": "^/policy/booking\\-payment\\-cancellation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policy/booking\\-payment\\-cancellation(?:/)?$"
+    },
+    {
+      "page": "/policy/inclusions-exclusions",
+      "regex": "^/policy/inclusions\\-exclusions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policy/inclusions\\-exclusions(?:/)?$"
+    },
+    {
+      "page": "/policy/privacy",
+      "regex": "^/policy/privacy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policy/privacy(?:/)?$"
+    },
+    {
+      "page": "/team",
+      "regex": "^/team(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/team(?:/)?$"
+    },
+    {
+      "page": "/tours",
+      "regex": "^/tours(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tours(?:/)?$"
+    },
+    {
+      "page": "/travel-guide",
+      "regex": "^/travel\\-guide(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/travel\\-guide(?:/)?$"
+    },
+    {
+      "page": "/travel-guide/booking-information",
+      "regex": "^/travel\\-guide/booking\\-information(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/travel\\-guide/booking\\-information(?:/)?$"
+    },
+    {
+      "page": "/travel-guide/faq",
+      "regex": "^/travel\\-guide/faq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/travel\\-guide/faq(?:/)?$"
+    },
+    {
+      "page": "/travel-guide/ijen-health-screening",
+      "regex": "^/travel\\-guide/ijen\\-health\\-screening(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/travel\\-guide/ijen\\-health\\-screening(?:/)?$"
+    },
+    {
+      "page": "/travel-guide/packing-and-fitness",
+      "regex": "^/travel\\-guide/packing\\-and\\-fitness(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/travel\\-guide/packing\\-and\\-fitness(?:/)?$"
+    },
+    {
+      "page": "/travel-guide/police-escort-for-groups",
+      "regex": "^/travel\\-guide/police\\-escort\\-for\\-groups(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/travel\\-guide/police\\-escort\\-for\\-groups(?:/)?$"
+    },
+    {
+      "page": "/travel-guide/safety-on-tours",
+      "regex": "^/travel\\-guide/safety\\-on\\-tours(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/travel\\-guide/safety\\-on\\-tours(?:/)?$"
+    },
+    {
+      "page": "/travel-guide/weather-and-closures",
+      "regex": "^/travel\\-guide/weather\\-and\\-closures(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/travel\\-guide/weather\\-and\\-closures(?:/)?$"
+    },
+    {
+      "page": "/verify-jvto",
+      "regex": "^/verify\\-jvto(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/verify\\-jvto(?:/)?$"
+    },
+    {
+      "page": "/verify-jvto/history-artifacts",
+      "regex": "^/verify\\-jvto/history\\-artifacts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/verify\\-jvto/history\\-artifacts(?:/)?$"
+    },
+    {
+      "page": "/verify-jvto/legal",
+      "regex": "^/verify\\-jvto/legal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/verify\\-jvto/legal(?:/)?$"
+    },
+    {
+      "page": "/verify-jvto/police-safety",
+      "regex": "^/verify\\-jvto/police\\-safety(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/verify\\-jvto/police\\-safety(?:/)?$"
+    },
+    {
+      "page": "/verify-jvto/press-recognition",
+      "regex": "^/verify\\-jvto/press\\-recognition(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/verify\\-jvto/press\\-recognition(?:/)?$"
+    },
+    {
+      "page": "/why-jvto",
+      "regex": "^/why\\-jvto(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/why\\-jvto(?:/)?$"
+    },
+    {
+      "page": "/why-jvto/community-standards",
+      "regex": "^/why\\-jvto/community\\-standards(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/why\\-jvto/community\\-standards(?:/)?$"
+    },
+    {
+      "page": "/why-jvto/our-story",
+      "regex": "^/why\\-jvto/our\\-story(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/why\\-jvto/our\\-story(?:/)?$"
+    },
+    {
+      "page": "/why-jvto/reviews",
+      "regex": "^/why\\-jvto/reviews(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/why\\-jvto/reviews(?:/)?$"
+    },
+    {
+      "page": "/why-jvto/safety-leadership",
+      "regex": "^/why\\-jvto/safety\\-leadership(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/why\\-jvto/safety\\-leadership(?:/)?$"
+    },
+    {
+      "page": "/why-jvto/the-jvto-difference",
+      "regex": "^/why\\-jvto/the\\-jvto\\-difference(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/why\\-jvto/the\\-jvto\\-difference(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

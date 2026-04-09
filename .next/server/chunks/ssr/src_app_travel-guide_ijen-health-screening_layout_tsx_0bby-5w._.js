@@ -1,0 +1,3 @@
+module.exports=[21189,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/travel-guide/ijen-health-screening",{title:"Ijen Health Screening | Travel Guide | Java Volcano Tour Operator",description:"Mandatory Ijen medical screening explained: vital checks, fit-to-climb clearance, and how JVTO handles pre-ascent safety."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),24996,a=>{a.n(a.i(21189))}];
+
+//# sourceMappingURL=src_app_travel-guide_ijen-health-screening_layout_tsx_0bby-5w._.js.map

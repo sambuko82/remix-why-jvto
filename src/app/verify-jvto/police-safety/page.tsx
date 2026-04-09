@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { 
   ShieldAlert, 
@@ -59,10 +61,10 @@ export default function PoliceSafetyProof() {
             onClick={onBack}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Proof Hub
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Verify Hub
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <Siren className="w-4 h-4" /> Police & Safety Registry
+            <Siren className="w-4 h-4" /> Police & Safety Proof
           </div>
         </div>
       </div>
@@ -79,7 +81,7 @@ export default function PoliceSafetyProof() {
         >
           <div className="flex items-center gap-2 mb-6">
             <ShieldPlus className="w-4 h-4 text-safety-orange" />
-            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Security & Compliance Archive</span>
+            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Authority & Safety Records</span>
           </div>
           <h1 className="text-5xl md:text-9xl font-black text-authority-navy mb-8 leading-[0.85] uppercase tracking-tighter">
             {meta?.h1 || 'POLICE & SAFETY.'}
@@ -105,7 +107,7 @@ export default function PoliceSafetyProof() {
                 </div>
                 <div>
                   <h2 className="text-3xl font-black text-authority-navy uppercase leading-none mb-1">Police Coordination</h2>
-                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">POLRI_COORDINATION_REGISTRY</p>
+                  <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">POLRI_COORDINATION_RECORDS</p>
                 </div>
               </div>
               <EvidenceBadge type="verified" text="Active Coordination" />
@@ -133,7 +135,7 @@ export default function PoliceSafetyProof() {
                   <div className="flex items-center justify-between pt-8 border-t border-slate-100">
                     <div className="flex items-center gap-3">
                       <Eye className="w-5 h-5 text-safety-orange" />
-                      <span className="font-mono text-[11px] uppercase tracking-widest font-black">Inspect Document</span>
+                      <span className="font-mono text-[11px] uppercase tracking-widest font-black">Open Record</span>
                     </div>
                     <HashBadge hash={item.hash || 'PENDING'} />
                   </div>
@@ -184,7 +186,7 @@ export default function PoliceSafetyProof() {
                   <div className="flex items-center justify-between pt-8 border-t border-slate-100">
                     <div className="flex items-center gap-3">
                       <Eye className="w-5 h-5 text-safety-orange" />
-                      <span className="font-mono text-[11px] uppercase tracking-widest font-black">Inspect Document</span>
+                      <span className="font-mono text-[11px] uppercase tracking-widest font-black">Open Record</span>
                     </div>
                     <HashBadge hash={item.hash || 'PENDING'} />
                   </div>
@@ -206,7 +208,7 @@ export default function PoliceSafetyProof() {
             </div>
           </div>
           <p className="mt-12 font-mono text-[11px] text-slate-500 uppercase tracking-widest">
-            System: JVTO_SECURITY_ARCHIVE_V1.0 // Node: ID_JKT_02_SECURE
+            System: JVTO_SAFETY_V1.0 // Node: EAST_JAVA_SAFETY
           </p>
         </div>
       </div>
@@ -224,3 +226,4 @@ export default function PoliceSafetyProof() {
     </div>
   );
 }
+

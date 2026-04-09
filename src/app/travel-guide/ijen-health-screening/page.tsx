@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Activity, Stethoscope, FileCheck, ArrowLeft, ShieldCheck, HeartPulse, AlertTriangle, CheckCircle2, Lock, Fingerprint, Search, Database, ShieldAlert, ClipboardCheck, QrCode, ChevronRight, UserCheck, Timer, FileDigit } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -8,7 +10,7 @@ import { BookingRail } from '../../../components/BookingRail';
 
 export default function IjenHealthScreening() {
   const navigate = useNavigate();
-  const onBack = () => navigate('/');
+  const onBack = () => navigate('/travel-guide');
   const [activeStep, setActiveStep] = useState(0);
   const meta = SSOT.pages['/travel-guide/ijen-health-screening'];
 
@@ -41,10 +43,10 @@ export default function IjenHealthScreening() {
             onClick={onBack}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Safety Hub
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Travel Guide
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <Activity className="w-4 h-4" /> Medical Protocol v2.0
+            <Activity className="w-4 h-4" /> Ijen Health Screening
           </div>
         </div>
       </div>
@@ -66,7 +68,7 @@ export default function IjenHealthScreening() {
             {meta?.h1 || 'MEDICAL OVERSIGHT.'}
           </h1>
           <p className="text-lg md:text-2xl text-slate-500 max-w-3xl mx-auto leading-tight font-light">
-            Safety is not optional. Every guest climbing Mount Ijen must undergo a medical screening to ensure they are fit for the high-altitude environment and volcanic conditions.
+            Every guest climbing Ijen must pass a pre-ascent screening. This page explains who handles it, what is checked, and how clearance is issued before ascent.
           </p>
         </motion.div>
 
@@ -257,3 +259,4 @@ export default function IjenHealthScreening() {
     </div>
   );
 }
+

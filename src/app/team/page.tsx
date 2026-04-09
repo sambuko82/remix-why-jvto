@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -38,10 +40,10 @@ export default function TeamRegistryPage() {
             onClick={() => navigate('/')}
             className="group flex items-center gap-3 text-[10px] md:text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-3.5 h-3.5 md:w-4 md:h-4 group-hover:-translate-x-1 transition-transform" /> <span className="hidden xs:inline">Back to </span>Hub
+            <ArrowLeft className="w-3.5 h-3.5 md:w-4 md:h-4 group-hover:-translate-x-1 transition-transform" /> <span className="hidden xs:inline">Back to </span>Home
           </button>
           <div className="flex items-center gap-2 md:gap-3 text-safety-orange text-[10px] md:text-[11px] font-mono font-bold uppercase tracking-[0.15em] md:tracking-[0.2em]">
-            <Lock className="w-3.5 h-3.5 md:w-4 md:h-4" /> Personnel Protocol v1.9
+            <Lock className="w-3.5 h-3.5 md:w-4 md:h-4" /> Field Team
           </div>
         </div>
       </div>
@@ -55,13 +57,13 @@ export default function TeamRegistryPage() {
         >
           <div className="flex items-center gap-2 mb-4 md:mb-6">
             <UserCheck className="w-3.5 h-3.5 md:w-4 md:h-4 text-safety-orange" />
-            <span className="font-mono text-[10px] md:text-[11px] uppercase tracking-widest text-slate-500">Human Intelligence Registry</span>
+            <span className="font-mono text-[10px] md:text-[11px] uppercase tracking-widest text-slate-500">Field Team</span>
           </div>
           <h1 className="text-4xl md:text-8xl font-black text-authority-navy mb-4 md:mb-8 leading-[0.85] uppercase tracking-tighter">
-            {meta?.h1 || 'THE TEAM REGISTRY.'}
+            {meta?.h1 || 'THE FIELD TEAM.'}
           </h1>
           <p className="text-slate-500 text-lg md:text-xl leading-tight font-light max-w-2xl">
-            Our team is not composed of freelancers. Meet the full-time field operators, drivers, and guides who execute our safety-first protocols every day.
+            Meet the guides, drivers, and field operators behind route handling, guest support, and day-of-departure execution.
           </p>
         </motion.div>
 
@@ -93,15 +95,16 @@ export default function TeamRegistryPage() {
         {filteredCrew.length === 0 && (
           <div className="text-center py-16 md:py-32 bento-card border-dashed border-2 border-slate-200">
             <Database className="w-10 h-10 md:w-12 md:h-12 text-slate-200 mx-auto mb-4 md:mb-6" />
-            <p className="font-mono text-[10px] md:text-[11px] text-slate-500 uppercase tracking-widest px-4">No personnel matching your criteria found in the registry.</p>
+            <p className="font-mono text-[10px] md:text-[11px] text-slate-500 uppercase tracking-widest px-4">No team members matched this filter.</p>
           </div>
         )}
 
         {/* Footer Audit Stamp */}
         <div className="mt-16 md:mt-0">
-          <AuditStamp title="ROSTER_VERIFIED" subtitle="Audit Registry 2026" />
+          <AuditStamp title="TEAM_READY" subtitle="Field Team Layer" />
         </div>
       </div>
     </div>
   );
 }
+

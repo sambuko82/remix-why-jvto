@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/verify-jvto/layout,_N_T_/verify-jvto/legal/layout,_N_T_/verify-jvto/legal/page,_N_T_/verify-jvto/legal"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/verify-jvto/legal/__PAGE__",
+    "/verify-jvto/legal",
+    "/verify-jvto",
+    "/_index",
+    "/_head"
+  ]
+}

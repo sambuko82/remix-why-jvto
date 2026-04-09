@@ -1,0 +1,3 @@
+module.exports=[29850,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/verify-jvto/police-safety",{title:"Police & Safety Proof | Verify JVTO | Java Volcano Tour Operator",description:"Police coordination context, safety-related records, and field evidence tied to JVTO route handling in East Java."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),7033,a=>{a.n(a.i(29850))}];
+
+//# sourceMappingURL=src_app_verify-jvto_police-safety_layout_tsx_053bypt._.js.map

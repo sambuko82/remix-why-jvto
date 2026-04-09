@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { 
@@ -13,9 +15,6 @@ import {
   Activity, 
   FileText, 
   Star, 
-  Menu, 
-  X,
-  ChevronRight,
   Lock
 } from 'lucide-react';
 import { SSOT } from '../../lib/ssot';
@@ -25,15 +24,6 @@ import { FounderSpotlight } from '../../components/home/FounderSpotlight';
 
 export default function WhyJVTOHub() {
   const navigate = useNavigate();
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Extracting data from SSOT
   const founder = SSOT.organization.founder;
@@ -74,13 +64,13 @@ export default function WhyJVTOHub() {
                 onClick={() => navigate('/verify-jvto')}
                 className="w-full sm:w-auto bg-safety-orange hover:bg-safety-orange/90 text-white px-8 py-4 rounded-md font-bold uppercase tracking-wider transition-all shadow-card flex items-center justify-center gap-2"
               >
-                View Forensic Proof <ArrowRight className="w-5 h-5" />
+                Verify Credentials <ArrowRight className="w-5 h-5" />
               </button>
               <button 
                 onClick={() => navigate('/team')}
                 className="w-full sm:w-auto bg-white hover:bg-slate-50 border border-slate-200 text-authority-navy px-8 py-4 rounded-md font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-card"
               >
-                Meet the Team
+                Meet the Field Team
               </button>
             </div>
           </motion.div>
@@ -125,7 +115,7 @@ export default function WhyJVTOHub() {
                 onClick={() => navigate('/why-jvto/safety-leadership')}
                 className="text-safety-orange font-mono text-sm uppercase tracking-widest hover:text-authority-navy transition-colors flex items-center gap-2"
               >
-                Read the Founder's Doctrine <ArrowRight className="w-4 h-4" />
+                Read the Safety Leadership Brief <ArrowRight className="w-4 h-4" />
               </button>
             </motion.div>
             
@@ -160,7 +150,7 @@ export default function WhyJVTOHub() {
               Roots in Documented History
             </h2>
             <p className="text-slate-500 text-lg leading-relaxed">
-              Long-term artifacts that predate the recent tourism boom. Trace our footprint through international guidebooks and operational milestones.
+              Long-term artifacts that show JVTO did not appear overnight. Trace continuity through guidebooks, awards, and early operating evidence.
             </p>
           </div>
           
@@ -222,7 +212,7 @@ export default function WhyJVTOHub() {
                 onClick={() => navigate('/verify-jvto/history-artifacts')}
                 className="text-safety-orange font-mono text-sm uppercase tracking-widest hover:text-authority-navy transition-colors inline-flex items-center gap-2"
               >
-                Explore the Artifact Vault <ArrowRight className="w-4 h-4" />
+                Open History Proof <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -245,7 +235,7 @@ export default function WhyJVTOHub() {
                   <h2 className="text-2xl md:text-3xl font-black text-authority-navy tracking-tight">
                     Verified Legal Entity
                   </h2>
-                  <p className="text-slate-500 mt-1">Operating under strict Indonesian tourism laws. No shell companies.</p>
+                  <p className="text-slate-500 mt-1">Registered operator records, permits, and location data tied to the business behind JVTO.</p>
                 </div>
               </div>
               
@@ -272,7 +262,7 @@ export default function WhyJVTOHub() {
                 onClick={() => navigate('/verify-jvto/legal')}
                 className="bg-authority-navy hover:bg-authority-navy/90 text-white px-6 py-3 rounded-md font-mono text-sm uppercase tracking-widest transition-all w-full sm:w-auto shadow-card"
               >
-                View Cryptographic Legal Proof
+                Open Legal Proof
               </button>
             </motion.div>
           </div>
@@ -285,7 +275,7 @@ export default function WhyJVTOHub() {
               Guest Voices on Independent Platforms
             </h2>
             <p className="text-slate-500 text-lg leading-relaxed max-w-2xl mx-auto">
-              Independent reviews across major platforms—see the patterns for yourself. We don't hide behind curated testimonials.
+              Independent review paths matter more than on-site praise. Cross-check the platforms guests already use, then compare them with the rest of the proof layer.
             </p>
           </div>
           
@@ -324,15 +314,15 @@ export default function WhyJVTOHub() {
             })}
           </div>
           
-          <div className="text-center">
-            <button 
-              onClick={() => navigate('/why-jvto/reviews')}
-              className="text-safety-orange font-mono text-sm uppercase tracking-widest hover:text-authority-navy transition-colors inline-flex items-center gap-2"
-            >
-              Analyze All Reviews <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-        </section>
+            <div className="text-center">
+              <button 
+                onClick={() => navigate('/why-jvto/reviews')}
+                className="text-safety-orange font-mono text-sm uppercase tracking-widest hover:text-authority-navy transition-colors inline-flex items-center gap-2"
+              >
+                Open Review References <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </section>
 
         {/* 🏥 LAYER 7: HEALTH FLOW (MEDICAL PROTOCOL) */}
         <section id="health" className="container mx-auto px-6 py-24 border-t border-slate-200">
@@ -387,7 +377,7 @@ export default function WhyJVTOHub() {
               Safety as Operational Discipline
             </h2>
             <p className="text-slate-500 text-lg text-center mb-12">
-              Police-led safety mindset and clear decision boundaries. Tangible benefits, not marketing fluff.
+              What changes when a route is handled with police-led discipline, legal clarity, and pre-ascent screening built into the operating model.
             </p>
             
             <div className="space-y-4 mb-12">
@@ -414,7 +404,7 @@ export default function WhyJVTOHub() {
                 onClick={() => navigate('/why-jvto/the-jvto-difference')}
                 className="text-safety-orange font-mono text-sm uppercase tracking-widest hover:text-authority-navy transition-colors inline-flex items-center gap-2"
               >
-                Compare Our Standards <ArrowRight className="w-4 h-4" />
+                Open Standards Comparison <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -423,7 +413,7 @@ export default function WhyJVTOHub() {
         {/* 🤝 LAYER 9: PARTNER LOGOS (TRUST NETWORK) */}
         <section className="container mx-auto px-6 py-16 border-t border-slate-200">
           <h2 className="text-center text-sm font-mono text-slate-500 uppercase tracking-widest mb-10">
-            Our Trust Network
+            Supporting Network
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {SSOT.proof_vault.partners.map((partner, idx) => (
@@ -439,9 +429,19 @@ export default function WhyJVTOHub() {
             </div>
           </div>
         </section>
+
+        <div className="container mx-auto px-6">
+          <AuditStamp
+            title="AUTHORITY_VERIFIED"
+            subtitle="Trust Layer Ready"
+            system="JVTO_AUTHORITY_V1.0"
+            node="EAST_JAVA_AUTHORITY"
+          />
+        </div>
       </div>
     </div>
   );
 }
+
 
 

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { 
   Star, 
@@ -30,7 +32,7 @@ export default function ReviewsPage() {
             onClick={onBack}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Trust Hub
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Why JVTO
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
             <Star className="w-4 h-4" /> Guest Voices & Reviews
@@ -50,13 +52,13 @@ export default function ReviewsPage() {
         >
           <div className="flex items-center gap-2 mb-6">
             <Award className="w-4 h-4 text-safety-orange" />
-            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Reputation Archive</span>
+            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Independent Review Paths</span>
           </div>
           <h1 className="text-5xl md:text-9xl font-black text-authority-navy mb-8 leading-[0.85] uppercase tracking-tighter">
             {meta?.h1 || 'GUEST VOICES.'}
           </h1>
           <p className="text-2xl text-slate-500 max-w-3xl leading-tight font-light">
-            We don't just show the highlights. We publish verified feedback from real guests, focusing on our safety protocols, medical screening, and the quality of our private expeditions.
+            Reviews matter most when they stay independent. This page points to external platforms where guests describe route handling, guide support, and screening experiences in their own words.
           </p>
         </motion.div>
 
@@ -83,6 +85,7 @@ export default function ReviewsPage() {
                 <h3 className="text-2xl font-black text-authority-navy uppercase mb-4">{platformName}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed mb-8">
                   Read unfiltered, independent reviews from our past guests on {platformName}.
+                  
                 </p>
                 <a 
                   href={url}
@@ -90,7 +93,7 @@ export default function ReviewsPage() {
                   rel="noopener noreferrer"
                   className="mt-auto inline-flex items-center gap-3 text-[11px] font-mono font-bold text-safety-orange uppercase tracking-widest hover:gap-5 transition-all"
                 >
-                  View Reviews <ExternalLink className="w-4 h-4" />
+                  Open Reviews <ExternalLink className="w-4 h-4" />
                 </a>
               </motion.div>
             );
@@ -103,8 +106,8 @@ export default function ReviewsPage() {
             <div className="scanline"></div>
             <div className="flex flex-col items-center">
               <ThumbsUp className="w-20 h-20 text-safety-orange mb-8" />
-              <span className="text-5xl font-black text-authority-navy uppercase tracking-tighter leading-none mb-3">REPUTATION_VERIFIED</span>
-              <span className="font-mono text-[11px] text-slate-500 tracking-[0.4em] uppercase">Guest Voices 2026</span>
+              <span className="text-5xl font-black text-authority-navy uppercase tracking-tighter leading-none mb-3">REVIEWS_READY</span>
+              <span className="font-mono text-[11px] text-slate-500 tracking-[0.4em] uppercase">Independent Review Layer</span>
             </div>
           </div>
         </div>
@@ -112,3 +115,4 @@ export default function ReviewsPage() {
     </div>
   );
 }
+

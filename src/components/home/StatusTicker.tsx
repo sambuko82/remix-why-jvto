@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'motion/react';
 import { Activity, Wind, Thermometer, ShieldCheck } from 'lucide-react';
@@ -41,3 +43,4 @@ const TickerItem = ({ icon, label, value, status }: { icon: React.ReactNode, lab
     <span className="font-mono text-[11px] px-1.5 py-0.5 rounded-sm bg-verified-bright/10 text-verified-bright border border-verified-bright/20 font-bold">{status}</span>
   </div>
 );
+

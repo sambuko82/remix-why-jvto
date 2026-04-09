@@ -1,13 +1,13 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import { TopNav } from './TopNav';
 import { BottomNav } from './home/BottomNav';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from '@/lib/router-compat';
 import { motion, AnimatePresence } from 'motion/react';
-import { Helmet } from 'react-helmet-async';
 
 export const GlobalLayout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
-  const canonicalUrl = `https://javavolcano-touroperator.com${location.pathname}`;
   
   // Scroll to top on route change
   useEffect(() => {
@@ -16,9 +16,6 @@ export const GlobalLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="min-h-screen flex flex-col bg-audit-white">
-      <Helmet>
-        <link rel="canonical" href={canonicalUrl} />
-      </Helmet>
       <TopNav />
       <AnimatePresence mode="wait">
         <motion.main 

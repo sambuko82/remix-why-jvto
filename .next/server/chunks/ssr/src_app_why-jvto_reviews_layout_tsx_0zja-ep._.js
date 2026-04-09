@@ -1,0 +1,3 @@
+module.exports=[72904,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/why-jvto/reviews",{title:"JVTO Reviews & Independent References | Java Volcano Tour Operator",description:"Cross-check JVTO reviews on independent platforms and use them alongside legal, safety, and history proof before choosing a route."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),91124,a=>{a.n(a.i(72904))}];
+
+//# sourceMappingURL=src_app_why-jvto_reviews_layout_tsx_0zja-ep._.js.map

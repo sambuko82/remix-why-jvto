@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { 
   ShieldCheck, 
@@ -65,7 +67,7 @@ export default function SafetyOnTours() {
             {meta?.h1 || 'SAFETY ON TOURS.'}
           </h1>
           <p className="text-lg md:text-2xl text-slate-500 max-w-2xl mx-auto leading-tight font-light">
-            We don't just follow safety guidelines; we set them. From medical-grade gas masks to police-led hazard monitoring, discover the protocols that keep our guests safe in East Java's most extreme environments.
+            This page explains the practical safety standards behind JVTO routes: equipment, field handling, coordination, and response logic used on the ground.
           </p>
         </motion.div>
 
@@ -92,10 +94,11 @@ export default function SafetyOnTours() {
           <div className="p-6 md:p-8 bento-card bg-audit-white border border-slate-200 rounded-3xl flex flex-col items-center">
             <ShieldCheck className="w-10 h-10 md:w-12 md:h-12 text-safety-orange mb-4" />
             <span className="text-xl md:text-2xl font-black text-authority-navy uppercase tracking-tighter leading-none mb-2">SAFETY_VERIFIED</span>
-            <span className="font-mono text-[9px] md:text-[10px] text-slate-500 tracking-[0.2em] uppercase">JVTO Safety 2026</span>
+              <span className="font-mono text-[9px] md:text-[10px] text-slate-500 tracking-[0.2em] uppercase">Operational Safety Layer</span>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
+

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 interface TeamFilterProps {
@@ -26,9 +28,10 @@ export const TeamFilter = ({ currentFilter, onFilterChange, count }: TeamFilterP
       </div>
       {count !== undefined && (
         <p className="font-mono text-[11px] text-slate-500 uppercase tracking-widest">
-          Showing: {count} Verified Assets
+          Showing: {count} Profiles
         </p>
       )}
     </div>
   );
 };
+

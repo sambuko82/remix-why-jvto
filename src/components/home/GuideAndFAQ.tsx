@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BookOpen, ChevronRight, ShieldCheck, Thermometer, MapPin, HelpCircle, ChevronDown } from 'lucide-react';
@@ -55,14 +57,14 @@ export const GuideAndFAQ = () => {
           {/* Left: Travel Guide Intelligence */}
           <div className="lg:col-span-5">
             <div className="badge-eyebrow bg-authority-navy text-white mb-8">
-              <BookOpen className="w-3 h-3" /> Essential Intelligence
+              <BookOpen className="w-3 h-3" /> Pre-Trip Support
             </div>
             <h2 className="heading-section mb-8">
               Travel <br />
               <span className="text-safety-orange">Guide.</span>
             </h2>
             <p className="body-text mb-12">
-              Don't arrive unprepared. Our intelligence reports cover the critical logistics of East Java's volcanic terrain.
+              Use these support pages before you lock dates. They answer the practical questions that usually surface after people have already paid.
             </p>
 
             <div className="space-y-6">
@@ -102,7 +104,7 @@ export const GuideAndFAQ = () => {
                 <div className="w-10 h-10 rounded-sm bg-safety-orange/10 flex items-center justify-center">
                   <HelpCircle className="w-5 h-5 text-safety-orange" />
                 </div>
-                <span className="font-mono text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">FAQ Registry</span>
+                <span className="font-mono text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Common Questions</span>
               </div>
               
               <h3 className="text-3xl md:text-5xl font-black text-authority-navy uppercase tracking-tighter mb-12 leading-[0.9]">
@@ -152,3 +154,4 @@ export const GuideAndFAQ = () => {
     </section>
   );
 };
+

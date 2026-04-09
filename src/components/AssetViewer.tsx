@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ZoomIn, ZoomOut, Download, ShieldCheck, FileText, Fingerprint, Search, Info } from 'lucide-react';
@@ -103,7 +105,7 @@ export const AssetViewer = ({ isOpen, onClose, assetUrl, assetTitle, assetHash, 
                 <div className="flex items-center gap-3">
                   <Fingerprint className="w-3.5 h-3.5 text-slate-400" />
                   <span className="font-mono text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] truncate max-w-[150px] md:max-w-[300px]">
-                    HASH: {assetHash}
+                    REF: {assetHash}
                   </span>
                 </div>
               </div>
@@ -111,7 +113,7 @@ export const AssetViewer = ({ isOpen, onClose, assetUrl, assetTitle, assetHash, 
             
             <div className="flex items-center gap-6">
               <div className="hidden md:flex items-center gap-3 px-5 py-2.5 bg-verified-bright/10 border border-verified-bright/20 rounded-md text-verified-bright font-black text-[10px] uppercase tracking-[0.2em] shadow-card">
-                <ShieldCheck className="w-4 h-4" /> Integrity_Verified
+                <ShieldCheck className="w-4 h-4" /> Reference Ready
               </div>
               <button 
                 onClick={onClose}
@@ -176,7 +178,7 @@ export const AssetViewer = ({ isOpen, onClose, assetUrl, assetTitle, assetHash, 
                       >
                         <div className="scanline opacity-20"></div>
                         <div className="font-mono text-[11px] text-safety-orange uppercase tracking-widest mb-1 font-black">
-                          Forensic_Insight
+                          Reference Note
                         </div>
                         <div className="text-xs md:text-sm font-black uppercase mb-2 leading-tight">
                           {anno.label}
@@ -224,7 +226,7 @@ export const AssetViewer = ({ isOpen, onClose, assetUrl, assetTitle, assetHash, 
               </button>
               <div className="w-[1px] h-6 bg-white/10 mx-1 md:mx-2"></div>
               <button className="flex items-center gap-2 text-white hover:text-verified-bright transition-colors font-mono text-[11px] font-bold uppercase tracking-widest">
-                <Download className="w-3 h-3 md:w-4 md:h-4" /> <span className="hidden sm:inline">Download_Audit_Copy</span><span className="sm:hidden">DL</span>
+                <Download className="w-3 h-3 md:w-4 md:h-4" /> <span className="hidden sm:inline">Download Copy</span><span className="sm:hidden">DL</span>
               </button>
             </div>
           </div>
@@ -233,7 +235,7 @@ export const AssetViewer = ({ isOpen, onClose, assetUrl, assetTitle, assetHash, 
           <div className="p-4 md:p-6 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
             <div className="flex items-center gap-4 md:gap-6">
               <div className="flex flex-col">
-                <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-1">Audit Node</span>
+                <span className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-1">Reference Node</span>
                 <span className="font-mono text-[11px] text-authority-navy font-bold">ID_JKT_01</span>
               </div>
               <div className="hidden sm:flex flex-col">
@@ -243,7 +245,7 @@ export const AssetViewer = ({ isOpen, onClose, assetUrl, assetTitle, assetHash, 
             </div>
             <div className="flex items-center gap-2">
               <div className="status-live"></div>
-              <span className="font-mono text-[11px] text-safety-orange font-black uppercase tracking-widest">Live_Forensic_Session</span>
+              <span className="font-mono text-[11px] text-safety-orange font-black uppercase tracking-widest">Live Viewer</span>
             </div>
           </div>
         </motion.div>
@@ -251,3 +253,4 @@ export const AssetViewer = ({ isOpen, onClose, assetUrl, assetTitle, assetHash, 
     </AnimatePresence>
   );
 };
+

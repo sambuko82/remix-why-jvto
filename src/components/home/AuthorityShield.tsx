@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Shield, CheckCircle2, ExternalLink, Newspaper, Quote } from 'lucide-react';
@@ -149,3 +151,4 @@ export const AuthorityShield = () => {
     </section>
   );
 };
+

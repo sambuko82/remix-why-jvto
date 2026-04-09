@@ -1,0 +1,3 @@
+module.exports=[83146,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/travel-guide/faq",{title:"FAQ | Travel Guide | Java Volcano Tour Operator",description:"Common JVTO questions about routes, booking, screening, weather, and what to expect before departure."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),2156,a=>{a.n(a.i(83146))}];
+
+//# sourceMappingURL=src_app_travel-guide_faq_layout_tsx_0c872so._.js.map

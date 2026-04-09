@@ -1,0 +1,3 @@
+module.exports=[92121,a=>a.a(async(b,c)=>{try{var d=a.i(89272),e=b([d]);[d]=e.then?(await e)():e;let f=(0,d.buildPageMetadata)("/why-jvto/the-jvto-difference",{title:"The JVTO Difference | Private Route Standards | Java Volcano Tour Operator",description:"Compare the operating standards that make JVTO different: private-only handling, proof before payment, route clarity, and Ijen screening built into the plan."});a.s(["default",0,function({children:a}){return a},"metadata",0,f]),c()}catch(a){c(a)}},!1),15088,a=>{a.n(a.i(92121))}];
+
+//# sourceMappingURL=src_app_why-jvto_the-jvto-difference_layout_tsx_0m6w70k._.js.map

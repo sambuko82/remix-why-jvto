@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { LayoutDashboard, FileText, ShieldCheck, MessageSquare, Menu } from 'lucide-react';
@@ -7,10 +9,10 @@ export const BottomNav = () => {
   const location = useLocation();
 
   const navItems = [
-    { icon: <LayoutDashboard className="w-5 h-5" />, label: 'Audit Hub', path: '/' },
-    { icon: <FileText className="w-5 h-5" />, label: 'Evidence', path: '/verify-jvto' },
-    { icon: <ShieldCheck className="w-5 h-5" />, label: 'Safety', path: '/travel-guide/ijen-health-screening' },
-    { icon: <MessageSquare className="w-5 h-5" />, label: 'Support', path: '/why-jvto' },
+    { icon: <LayoutDashboard className="w-5 h-5" />, label: 'Home', path: '/' },
+    { icon: <FileText className="w-5 h-5" />, label: 'Verify', path: '/verify-jvto' },
+    { icon: <ShieldCheck className="w-5 h-5" />, label: 'Guide', path: '/travel-guide' },
+    { icon: <MessageSquare className="w-5 h-5" />, label: 'Why JVTO', path: '/why-jvto' },
   ];
 
   return (
@@ -37,3 +39,4 @@ export const BottomNav = () => {
     </nav>
   );
 };
+

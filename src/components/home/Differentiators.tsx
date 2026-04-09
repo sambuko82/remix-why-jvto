@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { ShieldCheck, Activity, Lock, FileCheck, ChevronRight } from 'lucide-react';
+import { ShieldCheck, Activity, FileCheck, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { SSOT } from '../../lib/ssot';
@@ -20,20 +22,20 @@ export const Differentiators = () => {
   const differentiators = [
     {
       icon: ShieldCheck,
-      title: "Police-Led Security",
-      desc: `Direct authority liaison led by active ${SSOT.organization.founder.role}.`,
+      title: "Police-Led Route Handling",
+      desc: `Operational decisions stay tied to an active ${SSOT.organization.founder.role}, not to reseller-style sales copy.`,
       link: "/why-jvto/safety-leadership"
     },
     {
       icon: Activity,
-      title: "Medical Clearance",
-      desc: "Strict high-altitude health screenings to prevent hypoxia.",
+      title: "Doctor-Backed Ijen Gate",
+      desc: "Pre-ascent screening happens before Ijen, and the cost is already included in the route logic instead of being sprung later.",
       link: "/travel-guide/ijen-health-screening"
     },
     {
-      icon: Lock,
-      title: "Cryptographic Proof",
-      desc: "Verifiable hashes back every operational claim we make.",
+      icon: FileCheck,
+      title: "Proof Before Payment",
+      desc: "Legal identity, police-safety context, and support pages stay visible before guests treat a route as settled.",
       link: "/verify-jvto"
     }
   ];
@@ -59,7 +61,7 @@ export const Differentiators = () => {
               Volcanic precision.
             </h3>
             <p className="body-text">
-              We operate with military-grade protocols to ensure every expedition is secured against the unpredictable nature of East Java's peaks.
+              This redesign is not about making JVTO look more premium. It is about making route seriousness, proof, and pre-booking clarity visible in seconds.
             </p>
           </div>
 
@@ -84,7 +86,7 @@ export const Differentiators = () => {
                     {item.desc}
                   </p>
                   <div className="mt-auto pt-4 flex items-center gap-2 text-safety-orange font-mono text-[11px] font-black uppercase tracking-[0.2em] group-hover:gap-4 transition-all">
-                    Learn More <ChevronRight className="w-4 h-4" />
+                    Open Reference <ChevronRight className="w-4 h-4" />
                   </div>
                 </motion.div>
               ))}
@@ -96,3 +98,4 @@ export const Differentiators = () => {
     </section>
   );
 };
+

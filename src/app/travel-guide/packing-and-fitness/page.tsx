@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -49,10 +51,10 @@ export default function PackingAndFitness() {
             onClick={() => navigate('/travel-guide')}
             className="group flex items-center gap-3 text-[11px] font-mono font-bold text-slate-500 hover:text-authority-navy transition-all uppercase tracking-widest"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Travel Guide
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Travel Guide
           </button>
           <div className="flex items-center gap-3 text-safety-orange text-[11px] font-mono font-bold uppercase tracking-[0.2em]">
-            <Lock className="w-4 h-4" /> Prep_Protocol_v1.9
+            <Lock className="w-4 h-4" /> Packing & Fitness
           </div>
         </div>
       </div>
@@ -68,13 +70,13 @@ export default function PackingAndFitness() {
         >
           <div className="flex items-center gap-2 mb-6">
             <Backpack className="w-4 h-4 text-safety-orange" />
-            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Preparation Standards</span>
+            <span className="font-mono text-[11px] uppercase tracking-widest text-slate-500">Preparation Notes</span>
           </div>
           <h1 className="text-4xl md:text-8xl font-black text-authority-navy mb-8 leading-[0.85] uppercase tracking-tighter">
             {meta?.h1 || 'PACKING & FITNESS.'}
           </h1>
           <p className="text-slate-500 text-lg md:text-xl leading-tight font-light max-w-2xl">
-            Success in volcanic environments depends on preparation. Use this guide to ensure you have the right gear and understand the physical demands of each site.
+            Use this page to match the route with the right clothing, footwear, and physical expectations before departure day.
           </p>
         </motion.div>
 
@@ -142,7 +144,7 @@ export default function PackingAndFitness() {
               <div className="badge-eyebrow badge-eyebrow-white mb-6">
                 <ShieldCheck className="w-3 h-3" /> JVTO Provided Gear
               </div>
-              <h2 className="text-3xl md:text-4xl font-black uppercase leading-none mb-4">We Supply <br />The Tech.</h2>
+              <h2 className="text-3xl md:text-4xl font-black uppercase leading-none mb-4">JVTO Supplies <br />Critical Gear.</h2>
               <p className="text-slate-400 text-base md:text-lg font-light leading-tight">
                 For every Ijen expedition, we provide professional-grade gas masks with specialized filters and headlamps. We don't use cheap, unverified masks.
               </p>
@@ -151,14 +153,15 @@ export default function PackingAndFitness() {
               onClick={() => navigate('/travel-guide/safety-on-tours')}
               className="w-full md:w-auto bg-white text-authority-navy px-8 md:px-10 py-4 md:py-5 rounded-xl font-black uppercase tracking-wider transition-all hover:bg-slate-100 flex items-center justify-center gap-3 group"
             >
-              Safety Standards <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Read Safety Standards <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </div>
 
         {/* Footer Audit Stamp */}
-        <AuditStamp title="PREP_VERIFIED" subtitle="Registry 2026" system="JVTO_DOCS_V1.9" />
+        <AuditStamp title="PREP_VERIFIED" subtitle="Support Layer Ready" system="JVTO_GUIDE_V1.0" node="EAST_JAVA_PREP" />
       </div>
     </div>
   );
 }
+

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { 
   Siren, 
@@ -62,7 +64,7 @@ export default function PoliceEscort() {
             {meta?.h1 || 'POLICE ESCORT.'}
           </h1>
           <p className="text-lg md:text-2xl text-slate-500 max-w-2xl mx-auto leading-tight font-light">
-            For large groups and high-profile delegations, we provide direct coordination with the Indonesian National Police (POLRI) to ensure seamless transit and maximum security across East Java.
+            This page explains when police escort support is relevant, how coordination works, and what large groups should clarify before the route is confirmed.
           </p>
         </motion.div>
 
@@ -89,10 +91,11 @@ export default function PoliceEscort() {
           <div className="p-6 md:p-8 bento-card bg-audit-white border border-slate-200 rounded-3xl flex flex-col items-center">
             <Siren className="w-10 h-10 md:w-12 md:h-12 text-safety-orange mb-4" />
             <span className="text-xl md:text-2xl font-black text-authority-navy uppercase tracking-tighter leading-none mb-2">ESCORT_VERIFIED</span>
-            <span className="font-mono text-[9px] md:text-[10px] text-slate-500 tracking-[0.2em] uppercase">Police Coordination 2026</span>
+              <span className="font-mono text-[9px] md:text-[10px] text-slate-500 tracking-[0.2em] uppercase">Escort Support Layer</span>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
+

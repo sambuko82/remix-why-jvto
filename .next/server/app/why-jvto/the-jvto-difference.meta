@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/why-jvto/layout,_N_T_/why-jvto/the-jvto-difference/layout,_N_T_/why-jvto/the-jvto-difference/page,_N_T_/why-jvto/the-jvto-difference"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/why-jvto/the-jvto-difference/__PAGE__",
+    "/why-jvto/the-jvto-difference",
+    "/why-jvto",
+    "/_index",
+    "/_head"
+  ]
+}
